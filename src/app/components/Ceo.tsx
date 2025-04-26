@@ -5,17 +5,6 @@ import Image from "next/image";
 const Ceo = () => {
   return (
     <section className="w-full py-16 md:py-20 lg:py-24 bg-[#F3F0E6] relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0">
-        <Image
-          src="/ceo-background.png"
-          alt="Background gradient"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px]">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-16">

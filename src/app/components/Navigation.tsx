@@ -70,12 +70,14 @@ const Navigation = () => {
             >
               Продукти
             </button>
-            {isProductsOpen && (
-              <div
-                className="absolute top-full left-0 bg-white p-10 min-w-[800px] shadow-lg z-50"
-                onMouseEnter={() => setIsProductsOpen(true)}
-                onMouseLeave={() => setIsProductsOpen(false)}
-              >
+          </div>
+          {isProductsOpen && (
+            <div
+              className="absolute top-full left-0 w-screen bg-white shadow-lg z-50"
+              onMouseEnter={() => setIsProductsOpen(true)}
+              onMouseLeave={() => setIsProductsOpen(false)}
+            >
+              <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
                 <div className="flex gap-16">
                   <div className="flex flex-col gap-2">
                     <Link
@@ -159,23 +161,15 @@ const Navigation = () => {
                   </div>
                 </div>
               </div>
-            )}
-          </div>
-
-          <div className="relative">
-            <button
-              className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
+            </div>
+          )}
+          {isEducationOpen && (
+            <div
+              className="absolute top-full left-0 w-screen bg-white shadow-lg z-50"
               onMouseEnter={() => setIsEducationOpen(true)}
               onMouseLeave={() => setIsEducationOpen(false)}
             >
-              Едукација
-            </button>
-            {isEducationOpen && (
-              <div
-                className="absolute top-full left-0 bg-white p-10 min-w-[800px] shadow-lg z-50"
-                onMouseEnter={() => setIsEducationOpen(true)}
-                onMouseLeave={() => setIsEducationOpen(false)}
-              >
+              <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
                 <div className="flex gap-16">
                   <div className="flex flex-col gap-2">
                     <Link
@@ -199,7 +193,17 @@ const Navigation = () => {
                   </div>
                 </div>
               </div>
-            )}
+            </div>
+          )}
+
+          <div className="relative">
+            <button
+              className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
+              onMouseEnter={() => setIsEducationOpen(true)}
+              onMouseLeave={() => setIsEducationOpen(false)}
+            >
+              Едукација
+            </button>
           </div>
 
           <Link
