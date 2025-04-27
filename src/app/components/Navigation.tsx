@@ -70,131 +70,99 @@ const Navigation = () => {
             >
               Продукти
             </button>
+            {isProductsOpen && (
+              <div
+                className="fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2"
+                onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
+              >
+                <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
+                  <div className="flex gap-16">
+                    <div className="flex flex-col gap-2">
+                      <Link
+                        href="/products/stocks"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Акции
+                      </Link>
+                      <Link
+                        href="/products/funds"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Инвестициски фондови
+                      </Link>
+                      <Link
+                        href="/products/mse"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Македонска берза
+                      </Link>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <Link
+                        href="/products/dividend"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Дивиденда
+                      </Link>
+                      <Link
+                        href="/products/trading"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Тргување со акции
+                      </Link>
+                      <Link
+                        href="/products/bonds"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Обврзници
+                      </Link>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <Link
+                        href="/products/securities"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Хартии од вредност
+                      </Link>
+                      <Link
+                        href="/products/bond-types"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Видови обврзници
+                      </Link>
+                      <Link
+                        href="/products/stock-index"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Берзански индекс
+                      </Link>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <Link
+                        href="/products/income"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Приход
+                      </Link>
+                      <Link
+                        href="/products/diversification"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Диверзификација
+                      </Link>
+                      <Link
+                        href="/products/inflation"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Инфлација
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          {isProductsOpen && (
-            <div
-              className="absolute top-full left-0 w-screen bg-white shadow-lg z-50"
-              onMouseEnter={() => setIsProductsOpen(true)}
-              onMouseLeave={() => setIsProductsOpen(false)}
-            >
-              <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
-                <div className="flex gap-16">
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href="/products/stocks"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Акции
-                    </Link>
-                    <Link
-                      href="/products/funds"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Инвестициски фондови
-                    </Link>
-                    <Link
-                      href="/products/mse"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Македонска берза
-                    </Link>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href="/products/dividend"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Дивиденда
-                    </Link>
-                    <Link
-                      href="/products/trading"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Тргување со акции
-                    </Link>
-                    <Link
-                      href="/products/bonds"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Обврзници
-                    </Link>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href="/products/securities"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Хартии од вредност
-                    </Link>
-                    <Link
-                      href="/products/bond-types"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Видови обврзници
-                    </Link>
-                    <Link
-                      href="/products/stock-index"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Берзански индекс
-                    </Link>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href="/products/income"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Приход
-                    </Link>
-                    <Link
-                      href="/products/diversification"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Диверзификација
-                    </Link>
-                    <Link
-                      href="/products/inflation"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Инфлација
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-          {isEducationOpen && (
-            <div
-              className="absolute top-full left-0 w-screen bg-white shadow-lg z-50"
-              onMouseEnter={() => setIsEducationOpen(true)}
-              onMouseLeave={() => setIsEducationOpen(false)}
-            >
-              <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
-                <div className="flex gap-16">
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href="/education/money-fund"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Паричен фонд
-                    </Link>
-                    <Link
-                      href="/education/progressive-fund"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Прогресивен фонд (акциски фонд)
-                    </Link>
-                    <Link
-                      href="/education/investment-funds"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Инвестициски фондови
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
 
           <div className="relative">
             <button
@@ -204,6 +172,38 @@ const Navigation = () => {
             >
               Едукација
             </button>
+            {isEducationOpen && (
+              <div
+                className="fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2"
+                onMouseEnter={() => setIsEducationOpen(true)}
+                onMouseLeave={() => setIsEducationOpen(false)}
+              >
+                <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
+                  <div className="flex gap-16">
+                    <div className="flex flex-col gap-2">
+                      <Link
+                        href="/education/money-fund"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Паричен фонд
+                      </Link>
+                      <Link
+                        href="/education/progressive-fund"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Прогресивен фонд (акциски фонд)
+                      </Link>
+                      <Link
+                        href="/education/investment-funds"
+                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      >
+                        Инвестициски фондови
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           <Link

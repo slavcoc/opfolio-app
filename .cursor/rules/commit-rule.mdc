@@ -1,0 +1,11 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+Commit all changes for every prompt
+One prompt one commit
+
+Make all the design responsive
+
+Always use mcp for fetching design

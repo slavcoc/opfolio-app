@@ -14,10 +14,10 @@ const MainHeader = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="font-lora text-4xl md:text-5xl lg:text-6xl font-medium text-[#1F1514] leading-[1.09] tracking-[0.01em] mb-6">
+            <h1 className="font-lora text-4xl md:text-5xl lg:text-[64px] font-medium text-[#1F1514] leading-[1.09] tracking-[0.01em] mb-6">
               Инвестирањето наскоро достапно до секого
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-[#1F1514] font-light leading-[1.4] max-w-[544px] mx-auto lg:mx-0 mb-8">
+            <p className="font-inter text-lg md:text-xl lg:text-[24px] text-[#1F1514] font-light leading-[1.42] max-w-[544px] mx-auto lg:mx-0 mb-8">
               Со нашиот уникатен модел за селекција (Opfolio Radar) и
               софтверското решение за оптимална алатка за алокација (Opfolio
               Invest), поседуваме напредна комбинација од професионално know-how
@@ -27,7 +27,7 @@ const MainHeader = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/consultation"
-                className="px-10 py-4 bg-[#F5C322] text-[#1F1514] rounded-xl hover:bg-[#1F1514] hover:text-white transition-colors font-bold text-lg border border-white text-center"
+                className="px-10 py-4 bg-[#F5C322] text-[#1F1514] rounded-xl hover:bg-[#1F1514] hover:text-white transition-colors font-inter font-bold text-[20px] border border-white text-center"
               >
                 Закажете консултација
               </Link>
