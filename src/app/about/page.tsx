@@ -1,11 +1,11 @@
 import React from "react";
-import AboutIntro from "@/components/AboutIntro";
-import AboutMissionAndVision from "@/components/AboutMissionAndVision";
-import AboutOpfolio from "@/components/AboutOpfolio";
-import AboutCeo from "@/components/AboutCeo";
-import AboutTeamHierarchy from "@/components/AboutTeamHierarchy";
-import AboutContact from "@/components/AboutContact";
-import AboutDocumentsAndRegulation from "@/components/AboutDocumentsAndRegulation";
+import AboutIntro from "@/app/components/AboutIntro";
+import AboutMissionAndVision from "@/app/components/AboutMissionAndVision";
+import AboutOpfolio from "@/app/components/AboutOpfolio";
+import AboutCeo from "@/app/components/AboutCeo";
+import AboutTeamHierarchy from "@/app/components/AboutTeamHierarchy";
+import AboutContact from "@/app/components/AboutContact";
+import AboutDocumentsAndRegulation from "@/app/components/AboutDocumentsAndRegulation";
 
 export const metadata = {
   title: "About Us | Opfolio",
