@@ -44,17 +44,17 @@ const teamMembers: TeamMember[] = [
 
 const AboutTeamHierarchy: React.FC = () => {
   return (
-    <section className="bg-[#F3F0E6] py-36 px-20">
+    <section className="bg-[#F3F0E6] py-8 sm:py-12 md:py-16 lg:py-24 xl:py-36 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
       <div className="max-w-[1666px] mx-auto">
-        <h2 className="font-lora font-semibold text-[48px] leading-[1.28] text-center text-[#1F1514] mb-24">
+        <h2 className="font-lora font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] leading-[1.28] text-center text-[#1F1514] mb-8 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24">
           Тимот на Opfolio
         </h2>
 
-        <div className="flex flex-col gap-22">
+        <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20">
           {/* First row - single member */}
           <div className="flex justify-center">
-            <div className="w-[300px]">
-              <div className="relative w-[200px] h-[200px] mx-auto mb-6">
+            <div className="w-full max-w-[280px] sm:max-w-[300px]">
+              <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[175px] md:h-[175px] lg:w-[200px] lg:h-[200px] mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6">
                 <div className="absolute inset-0 bg-[#DADED5] rounded-full"></div>
                 <div
                   className="absolute inset-0 border border-[#F5C322] rounded-full"
@@ -70,10 +70,10 @@ const AboutTeamHierarchy: React.FC = () => {
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="font-inter font-semibold text-[32px] leading-none text-black mb-2">
+                <h3 className="font-inter font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-none text-black mb-1 sm:mb-2">
                   {teamMembers[0].name}
                 </h3>
-                <p className="font-inter text-[20px] leading-[1.6] text-black mb-4">
+                <p className="font-inter text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] leading-[1.6] text-black mb-3 sm:mb-4">
                   {teamMembers[0].position}
                 </p>
                 {teamMembers[0].linkedin && (
@@ -83,12 +83,13 @@ const AboutTeamHierarchy: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-block"
                   >
-                    <div className="w-8 h-8 mx-auto bg-white rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto bg-white rounded-full flex items-center justify-center">
                       <svg
                         viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
+                        width="20"
+                        height="20"
                         fill="#0076B2"
+                        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                       >
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                       </svg>
@@ -100,10 +101,13 @@ const AboutTeamHierarchy: React.FC = () => {
           </div>
 
           {/* Second row - two members */}
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {teamMembers.slice(1, 3).map((member, index) => (
-              <div key={index} className="w-[300px]">
-                <div className="relative w-[200px] h-[200px] mx-auto mb-6">
+              <div
+                key={index}
+                className="w-full max-w-[280px] sm:max-w-[300px] mx-auto"
+              >
+                <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[175px] md:h-[175px] lg:w-[200px] lg:h-[200px] mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6">
                   <div className="absolute inset-0 bg-[#DADED5] rounded-full"></div>
                   <div className="absolute inset-0 border border-[#F5C322] rounded-full"></div>
                   <div className="absolute inset-0 overflow-hidden rounded-full">
@@ -116,10 +120,10 @@ const AboutTeamHierarchy: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="font-inter font-semibold text-[32px] leading-none text-black mb-2">
+                  <h3 className="font-inter font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-none text-black mb-1 sm:mb-2">
                     {member.name}
                   </h3>
-                  <p className="font-inter text-[20px] leading-[1.6] text-black mb-4">
+                  <p className="font-inter text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] leading-[1.6] text-black mb-3 sm:mb-4">
                     {member.position}
                   </p>
                   {member.linkedin && (
@@ -128,8 +132,12 @@ const AboutTeamHierarchy: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="w-8 h-8 mx-auto">
-                        <svg viewBox="0 0 24 24" fill="#0076B2">
+                      <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="#0076B2"
+                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                        >
                           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
                       </div>
@@ -141,10 +149,13 @@ const AboutTeamHierarchy: React.FC = () => {
           </div>
 
           {/* Third row - three members */}
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-col md:flex-row justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {teamMembers.slice(3).map((member, index) => (
-              <div key={index} className="w-[300px]">
-                <div className="relative w-[200px] h-[200px] mx-auto mb-6">
+              <div
+                key={index}
+                className="w-full max-w-[280px] sm:max-w-[300px] mx-auto"
+              >
+                <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[175px] md:h-[175px] lg:w-[200px] lg:h-[200px] mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6">
                   <div className="absolute inset-0 bg-[#DADED5] rounded-full"></div>
                   <div className="absolute inset-0 border border-[#F5C322] rounded-full"></div>
                   <div className="absolute inset-0 overflow-hidden rounded-full">
@@ -157,10 +168,10 @@ const AboutTeamHierarchy: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="font-inter font-semibold text-[32px] leading-none text-black mb-2">
+                  <h3 className="font-inter font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-none text-black mb-1 sm:mb-2">
                     {member.name}
                   </h3>
-                  <p className="font-inter text-[20px] leading-[1.6] text-black mb-4">
+                  <p className="font-inter text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] leading-[1.6] text-black mb-3 sm:mb-4">
                     {member.position}
                   </p>
                   {member.linkedin && (
@@ -169,8 +180,12 @@ const AboutTeamHierarchy: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="w-8 h-8 mx-auto">
-                        <svg viewBox="0 0 24 24" fill="#0076B2">
+                      <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="#0076B2"
+                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                        >
                           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
                       </div>

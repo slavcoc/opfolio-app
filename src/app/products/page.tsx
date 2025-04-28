@@ -6,11 +6,15 @@ import Consultation from "../components/Consultation";
 
 export default function ProductsPage() {
   return (
-    <main>
-      <ProductHeader />
-      <Radar />
-      <Invest />
-      <Consultation />
+    <main className="w-full">
+      <div className="w-full">
+        <ProductHeader />
+      </div>
+      <div className="w-full">
+        <Radar />
+        <Invest />
+        <Consultation />
+      </div>
     </main>
   );
 }

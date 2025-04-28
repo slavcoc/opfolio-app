@@ -17,18 +17,18 @@ interface BlogItemsProps {
 
 const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
   return (
-    <div className="relative w-full bg-[#F3F0E6] py-36">
+    <div className="relative w-full bg-[#F3F0E6] py-12 sm:py-16 md:py-24 lg:py-36">
       {/* Background Gradient */}
       <div className="absolute inset-0 pointer-events-none" />
 
-      <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px]">
-        <div className="grid grid-cols-2 gap-6">
+      <div className="max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {items.map((item) => (
             <div
               key={item.id}
               className="bg-white rounded-[20px] overflow-hidden"
             >
-              <div className="relative h-[300px] w-full">
+              <div className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full">
                 <Image
                   src={item.imageUrl}
                   alt={item.title}
@@ -37,8 +37,8 @@ const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
                 />
               </div>
 
-              <div className="p-8">
-                <div className="flex items-center gap-2 text-[#707A88] text-sm tracking-wider mb-6">
+              <div className="p-4 sm:p-6 md:p-8">
+                <div className="flex items-center gap-2 text-[#707A88] text-xs sm:text-sm tracking-wider mb-4 sm:mb-6">
                   <span>{item.date}</span>
                   <span>|</span>
                   <div className="flex items-center gap-1.5">
@@ -66,7 +66,7 @@ const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
                   </div>
                 </div>
 
-                <h3 className="font-lora text-[34px] leading-[1.28] text-[#1F1514] mb-6">
+                <h3 className="font-lora text-xl sm:text-2xl md:text-3xl lg:text-[34px] leading-[1.28] text-[#1F1514] mb-4 sm:mb-6">
                   {item.title}
                 </h3>
 

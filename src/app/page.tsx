@@ -12,11 +12,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="relative w-full overflow-hidden">
         {/* Background gradient container */}
-        <div className="absolute top-0 right-0 h-full ">
+        <div className="absolute top-0 right-0 h-full w-full md:w-auto">
           <img
             src="/background-gradient.png"
             alt="Background gradient"
-            className="h-full object-cover object-center"
+            className="h-full w-full md:w-auto object-cover object-center"
             style={{ height: "70%", opacity: "0.5", right: "0" }}
           />
         </div>
@@ -26,9 +26,11 @@ export default function Home() {
           <Stats />
         </div>
       </div>
-      <Products />
-      <Radar />
-      <Invest />
+      <div className="w-full">
+        <Products />
+        <Radar />
+        <Invest />
+      </div>
       {/* Background gradient section */}
       <div className="relative w-full">
         {/* Background gradient container */}
@@ -39,6 +41,7 @@ export default function Home() {
               alt="Background gradient"
               className="w-full h-full object-cover"
               fill
+              priority
             />
           </div>
         </div>

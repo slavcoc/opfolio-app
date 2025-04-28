@@ -15,14 +15,28 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main>
-      <AboutIntro />
-      <AboutMissionAndVision />
-      <AboutOpfolio />
-      <AboutCeo />
-      <AboutTeamHierarchy />
-      <AboutContact />
-      <AboutDocumentsAndRegulation />
+    <main className="w-full">
+      <div className="w-full">
+        <AboutIntro />
+      </div>
+      <div className="w-full">
+        <AboutMissionAndVision />
+      </div>
+      <div className="w-full">
+        <AboutOpfolio />
+      </div>
+      <div className="w-full">
+        <AboutCeo />
+      </div>
+      <div className="w-full">
+        <AboutTeamHierarchy />
+      </div>
+      <div className="w-full">
+        <AboutContact />
+      </div>
+      <div className="w-full">
+        <AboutDocumentsAndRegulation />
+      </div>
     </main>
   );
 }

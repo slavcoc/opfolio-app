@@ -38,10 +38,16 @@ const data = [
 ];
 export default function BlogPage() {
   return (
-    <main className="min-h-screen">
-      <BlogHeader />
-      <BlogItems items={data} />
-      <Consultation />
+    <main className="min-h-screen w-full">
+      <div className="w-full">
+        <BlogHeader />
+      </div>
+      <div className="w-full">
+        <BlogItems items={data} />
+      </div>
+      <div className="w-full">
+        <Consultation />
+      </div>
     </main>
   );
 }
