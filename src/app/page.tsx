@@ -12,13 +12,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="relative w-full overflow-hidden">
         {/* Background gradient container */}
-        <div className="absolute inset-0 w-full h-full background: url('/background-gradient.png') lightgray 50% / cover no-repeat;">
-          {/* <img
+        <div className="absolute top-0 right-0 h-full ">
+          <img
             src="/background-gradient.png"
             alt="Background gradient"
-            className="w-full h-full object-cover object-center"
-            style={{ height: "76%", opacity: "0.5" }}
-          /> */}
+            className="h-full object-cover object-center"
+            style={{ height: "70%", opacity: "0.5", right: "0" }}
+          />
         </div>
         {/* Content with gradient background */}
         <div className="relative z-10">
