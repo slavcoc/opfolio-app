@@ -3,6 +3,8 @@ import AboutIntro from "@/components/AboutIntro";
 import AboutMissionAndVision from "@/components/AboutMissionAndVision";
 import AboutOpfolio from "@/components/AboutOpfolio";
 import AboutCeo from "@/components/AboutCeo";
+import AboutTeamHierarchy from "@/components/AboutTeamHierarchy";
+import AboutContact from "@/components/AboutContact";
 import AboutDocumentsAndRegulation from "@/components/AboutDocumentsAndRegulation";
 
 export const metadata = {
@@ -18,6 +20,8 @@ export default function AboutPage() {
       <AboutMissionAndVision />
       <AboutOpfolio />
       <AboutCeo />
+      <AboutTeamHierarchy />
+      <AboutContact />
       <AboutDocumentsAndRegulation />
     </main>
   );
