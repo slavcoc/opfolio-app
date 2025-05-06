@@ -62,10 +62,10 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
-          <div className="relative">
+          <div className="relative ">
             <Link href={"/products"}>
               <button
-                className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
+                className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors cursor-pointer"
                 onMouseEnter={() => setIsProductsOpen(true)}
                 onMouseLeave={() => setIsProductsOpen(false)}
               >
@@ -169,7 +169,7 @@ const Navigation = () => {
           <div className="relative">
             <Link href={"/education"}>
               <button
-                className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
+                className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors cursor-pointer"
                 onMouseEnter={() => setIsEducationOpen(true)}
                 onMouseLeave={() => setIsEducationOpen(false)}
               >
@@ -254,14 +254,12 @@ const Navigation = () => {
         <div className="lg:hidden bg-white p-4 shadow-lg">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <Link href={"/products"}>
-                <button
-                  className="px-4 py-2 text-[#1F1514] font-medium"
-                  onClick={() => setIsProductsOpen(!isProductsOpen)}
-                >
-                  Продукти {isProductsOpen ? "▼" : "▶"}
-                </button>
-              </Link>
+              <button
+                className="px-4 py-2 text-[#1F1514] font-medium"
+                onClick={() => setIsProductsOpen(!isProductsOpen)}
+              >
+                Продукти {isProductsOpen ? "▼" : "▶"}
+              </button>
               {isProductsOpen && (
                 <div className="pl-4 flex flex-col gap-2">
                   <Link
@@ -305,14 +303,12 @@ const Navigation = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Link href={"/education"}>
-                <button
-                  className="px-4 py-2 text-[#1F1514] font-medium"
-                  onClick={() => setIsEducationOpen(!isEducationOpen)}
-                >
-                  Едукација {isEducationOpen ? "▼" : "▶"}
-                </button>
-              </Link>
+              <button
+                className="px-4 py-2 text-[#1F1514] font-medium"
+                onClick={() => setIsEducationOpen(!isEducationOpen)}
+              >
+                Едукација {isEducationOpen ? "▼" : "▶"}
+              </button>
               {isEducationOpen && (
                 <div className="pl-4 flex flex-col gap-2">
                   <Link

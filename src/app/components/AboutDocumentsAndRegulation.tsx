@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const AboutDocumentsAndRegulation: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-[#FFF4CF] py-12 sm:py-16 md:py-20">
@@ -9,8 +9,21 @@ const AboutDocumentsAndRegulation: React.FC = () => {
         2. Add the pattern SVG files from Figma to public/images/
         3. Update this div to include the pattern images with proper positioning
       */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-        {/* Pattern images will be added here */}
+      <div className="absolute right-0 bottom-0 w-[50%] h-[100%] z-[1]">
+        <Image
+          src="/documents-right-line.png"
+          alt="Documents rigt lines"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute left-0 bottom-0 w-[40%] h-[100%] z-[1]">
+        <Image
+          src="/documents-left-line.png"
+          alt="Documents left lines"
+          fill
+          className="object-cover"
+        />
       </div>
 
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-5">

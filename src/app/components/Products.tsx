@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const Products = () => {
   const products = [
@@ -9,18 +10,21 @@ const Products = () => {
       description:
         "Фонд кој инвестира во депозити од повеќе банки и обврзници. Диверзификација на инструменти со поголем принос.",
       link: "/products/money-fund",
+      icon: "/paricen-fond-icon.svg",
     },
     {
       title: "Акциски фонд",
       description:
         "Фонд кој инвестира во депозити од повеќе банки и обврзници. Диверзификација на инструменти со поголем принос.",
       link: "/products/stock-fund",
+      icon: "/akciski-fond-icon.svg",
     },
     {
       title: "Управување со портфолио",
       description:
         "Фонд кој инвестира во депозити од повеќе банки и обврзници. Диверзификација на инструменти со поголем принос.",
       link: "/products/portfolio-management",
+      icon: "/upravuvanje-rizici.svg",
     },
   ];
 
@@ -40,61 +44,54 @@ const Products = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="rounded-[20px] border border-[#5A7D7C] p-5 sm:p-6 md:p-8 lg:p-12 flex flex-col items-center"
-            >
-              <div className="w-full flex flex-col gap-3 sm:gap-4">
-                <div className="flex items-center">
-                  <h3 className="font-lora text-lg sm:text-xl md:text-2xl font-bold text-[#000000]">
-                    {product.title}
-                  </h3>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-sm sm:text-base text-[#000000] font-normal leading-[1.375]">
-                    {product.description}
-                  </p>
-                </div>
-                <div className="flex items-center mt-2 sm:mt-3 md:mt-4">
-                  <Link
-                    href={product.link}
-                    className="flex items-center text-[#000000] font-raleway font-semibold text-xs sm:text-sm hover:text-[#5A7D7C] transition-colors"
-                  >
-                    Дознај повеќе
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="ml-1"
-                    >
-                      <path
-                        d="M4 12L12 4M12 4H5M12 4V11"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 w-full">
+          {/* Card 1 */}
+          {products.map((product, index) => {
+            return (
+              <div
+                className="w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col gap-6 sm:gap-8"
+                key={`${index}${product.title}`}
+              >
+                <Image
+                  src={product.icon}
+                  alt={product.title}
+                  width={48}
+                  height={48}
+                />
+                <h3 className="font-lora font-bold text-xl sm:text-2xl leading-[1.28] text-black">
+                  {product.title}
+                </h3>
+                <p className="font-inter text-sm sm:text-base leading-[1.375] text-black">
+                  {product.description}
+                </p>
+                <div className="flex items-center gap-1  pb-20">
+                  <Link href={product.link}>
+                    <div className="flex items-center cursor-pointer">
+                      <span className="font-raleway font-semibold text-sm leading-[1.17] text-black">
+                        Дознај повеќе
+                      </span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="rotate-[-180deg] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                      >
+                        <path
+                          d="M12 4L4 12L12 20"
+                          stroke="#1F1514"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
                   </Link>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="hidden md:block relative mt-8 md:mt-12">
-          {/* Lines */}
-          <div className="absolute top-1/2 left-0 w-1/3 h-[2px] bg-[#6092C0]" />
-          <div className="absolute top-1/2 right-0 w-1/3 h-[2px] bg-[#6092C0]" />
-
-          {/* Dots */}
-          <div className="absolute top-1/2 left-1/4 w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#5A7D7C]" />
-          <div className="absolute top-1/2 right-1/4 w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#5A7D7C]" />
+            );
+          })}
         </div>
       </div>
     </section>

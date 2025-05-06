@@ -27,7 +27,7 @@ const MainHeader = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Link
                 href="/consultation"
-                className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#F5C322] text-[#1F1514] rounded-lg sm:rounded-xl hover:bg-[#1F1514] hover:text-white transition-colors font-inter font-bold text-base sm:text-lg md:text-xl lg:text-[20px] border border-white text-center"
+                className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#F5C322] text-[#1F1514] rounded-lg sm:rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg font-inter font-bold text-base sm:text-lg md:text-xl lg:text-[20px] border border-white text-center"
               >
                 Закажете консултација
               </Link>
@@ -40,10 +40,10 @@ const MainHeader = () => {
               <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] bg-white rounded-lg sm:rounded-xl md:rounded-2xl border border-[#F5C322] shadow-[3.97px_11.1px_25.38px_rgba(0,0,0,0.1),14.27px_43.62px_45.99px_rgba(0,0,0,0.09),32.51px_97.54px_61.85px_rgba(0,0,0,0.05),57.1px_173.67px_72.96px_rgba(0,0,0,0.01),89.61px_271.21px_80.09px_rgba(0,0,0,0)]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F3F0E6] to-[#2D445A] opacity-5 rounded-lg sm:rounded-xl md:rounded-2xl" />
                 <Image
-                  src="/hero-main.svg"
+                  src="/hero.png"
                   alt="Hero Image"
                   fill
-                  className="object-contain rounded-lg sm:rounded-xl md:rounded-2xl"
+                  className="object-contain rounded-lg sm:rounded-xl md:rounded-2xl object-cover"
                   priority
                   onError={() => setImageError(true)}
                 />

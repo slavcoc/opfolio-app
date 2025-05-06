@@ -11,17 +11,6 @@ const Ceo = () => {
           {/* Image - Left side */}
           <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] xl:max-w-[400px] mx-auto lg:mx-0 order-2 lg:order-1">
             <div className="relative aspect-square">
-              {/* Yellow circle background */}
-              <div className="absolute inset-0">
-                <div className="w-full h-full rounded-full bg-[#F5C322]" />
-              </div>
-
-              {/* Border circle */}
-              <div className="absolute inset-0">
-                <div className="w-full h-full rounded-full border border-[#F5C322]" />
-              </div>
-
-              {/* Image container */}
               <div className="absolute inset-0 p-1.5 sm:p-2">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
@@ -37,30 +26,28 @@ const Ceo = () => {
           </div>
 
           {/* Content - Right side */}
-          <div className="w-full lg:max-w-[600px] text-center lg:text-left order-1 lg:order-2">
+          <div className="w-full lg:max-w-[900px] text-center lg:text-left order-1 lg:order-2">
             <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
               <div className="flex flex-col gap-1.5 sm:gap-2">
-                <h2 className="font-lora text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[40px] font-medium text-[#1F1514] leading-[1.28]">
-                  Васко Богатиновски
+                <div className="relative">
+                  <Image
+                    src="/quote-icon.png"
+                    alt="Quote"
+                    width={30}
+                    height={30}
+                    className="absolute top-0 left-0 -ml-4"
+                  />
+                  <p className="font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[22px] text-[#1F1514] font-light leading-[1.28] relative z-10 pl-3 sm:pl-6 lg:pl-4 xl:pl-6">
+                    Редовното инвестирање во компании со докажана способност за
+                    создавање вредност е најсигурниот пат до долгорочен
+                    финансиски успех.
+                  </p>
+                </div>
+                <h2 className="font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-medium leading-[1.28] pt-5">
+                  - Васко Богдановски
                 </h2>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#1F1514] font-medium">
-                  CEO and Founder of Opfolio
-                </p>
-              </div>
-
-              <div className="relative">
-                <span
-                  className="absolute -top-4 sm:-top-6 md:-top-8 left-0 sm:left-4 lg:left-0
-                           font-['Kazimir-Bold'] text-[60px] sm:text-[80px] md:text-[90px] lg:text-[101.947px]
-                           text-[#1F1514] leading-[1.366] opacity-20"
-                  style={{ fontFeatureSettings: "'ss01' on" }}
-                >
-                  &ldquo;
-                </span>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-light leading-[1.28] relative z-10 pl-3 sm:pl-6 lg:pl-4 xl:pl-6">
-                  Не можете да се одлучите или не знаете од каде да почнете?{" "}
-                  <br className="hidden sm:block" />
-                  Закажете инвестициско советување!
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-medium pl-5">
+                  Главен извршен директор на Опфолио Инвестиции АД Скопје
                 </p>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 interface EducationCard {
   title: string;
   description: string;
@@ -90,8 +90,16 @@ export default function EducationItems() {
             <Link
               key={index}
               href={card.link}
-              className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300 w-full h-auto min-h-[200px] sm:min-h-[250px] md:min-h-[299px]"
+              className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300 w-full h-auto min-h-[200px] sm:min-h-[250px] md:min-h-[299px] relative"
             >
+              <div className="absolute right-0 bottom-0 w-full h-full">
+                <Image
+                  src="/education-lines.png"
+                  alt="Education Item"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="p-4 sm:p-6 md:p-8 flex flex-col h-full justify-between">
                 <h3 className="font-lora text-xl sm:text-2xl md:text-3xl lg:text-[32px] leading-[1.375em] text-black">
                   {card.title}
@@ -112,7 +120,7 @@ export default function EducationItems() {
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="rotate-[-90deg] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                      className="rotate-[-180deg] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                     >
                       <path
                         d="M12 4L4 12L12 20"
