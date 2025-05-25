@@ -37,18 +37,21 @@ const Ceo = () => {
                     height={30}
                     className="absolute top-0 left-0 -ml-4"
                   />
-                  <p className="font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[22px] text-[#1F1514] font-light leading-[1.28] relative z-10 pl-3 sm:pl-6 lg:pl-4 xl:pl-6">
-                    Редовното инвестирање во компании со докажана способност за
-                    создавање вредност е најсигурниот пат до долгорочен
-                    финансиски успех.
+                  <h2 className="font-lora text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium text-[#000000] mb-4 sm:mb-5 md:mb-6">
+                    Васко Богдановски
+                    <br />
+                    Главен извршен директор на Опфолио Инвестиции АД Скопје
+                  </h2>
+                  <div className="text-[101.947px] font-kazimir-bold text-[#000000] leading-[1.366] mb-4 sm:mb-5 md:mb-6">
+                    &ldquo;
+                  </div>
+                  <p className="font-lora text-xl sm:text-2xl md:text-[24px] font-medium text-[#000000] leading-[1.28] mb-4 sm:mb-5 md:mb-6">
+                    Редовното инвестирање во компании со докажана способност за создавање вредност е најсигурниот пат до долгорочен финансиски успех.
                   </p>
+                  <div className="font-lora text-xl sm:text-2xl md:text-[24px] font-medium text-[#000000] leading-[1.28]">
+                    -
+                  </div>
                 </div>
-                <h2 className="font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-medium leading-[1.28] pt-5">
-                  - Васко Богдановски
-                </h2>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-medium pl-5">
-                  Главен извршен директор на Опфолио Инвестиции АД Скопје
-                </p>
               </div>
             </div>
           </div>

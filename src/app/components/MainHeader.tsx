@@ -15,14 +15,10 @@ const MainHeader = () => {
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
             <h1 className="font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] font-medium text-[#1F1514] leading-[1.09] tracking-[0.01em] mb-4 sm:mb-5 md:mb-6">
-              Инвестирањето наскоро достапно до секого
+              Дајте им импулс на вашите пари
             </h1>
             <p className="font-inter text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] text-[#1F1514] font-light leading-[1.42] max-w-full sm:max-w-[500px] md:max-w-[544px] mx-auto lg:mx-0 mb-6 sm:mb-7 md:mb-8">
-              Со нашиот уникатен модел за селекција (Opfolio Radar) и
-              софтверското решение за оптимална алатка за алокација (Opfolio
-              Invest), поседуваме напредна комбинација од професионално know-how
-              и технологија која ни дава значајна конкурентска предност на
-              регионалниот пазар.
+              Дознајте како нашите стратегии можат да ви помогнат да постигнете финансиска независност
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Link

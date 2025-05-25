@@ -11,13 +11,12 @@ const Stats = () => {
             <div className="flex flex-col gap-1 w-full md:w-[300px]">
               <div className="flex justify-center items-center p-2">
                 <h3 className="font-lora text-2xl md:text-3xl lg:text-[32px] font-bold text-[#1F1514] leading-[1.28]">
-                  $20+ милиони
+                  Квалитет
                 </h3>
               </div>
               <div className="px-2">
                 <p className="font-inter text-base text-[#1F1514] font-normal leading-[1.5]">
-                  Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед
-                  до еиусмод темпор
+                  Водиме база на податоци за глобални компании, го следиме нивниот развој и утврдуваме кои од нив ги исполнуваат нашите строги критериуми за квалитет и раст.
                 </p>
               </div>
             </div>
@@ -26,13 +25,12 @@ const Stats = () => {
             <div className="flex flex-col gap-1 w-full md:w-[300px]">
               <div className="flex justify-center items-center p-2">
                 <h3 className="font-lora text-2xl md:text-3xl lg:text-[32px] font-bold text-[#1F1514] leading-[1.28]">
-                  10г.+ искуство
+                  Фокус
                 </h3>
               </div>
               <div className="px-2">
                 <p className="font-inter text-base text-[#1F1514] font-normal leading-[1.5]">
-                  Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед
-                  до еиусмод темпор
+                  Нашето инвестициско портфолио е сконцентрирано во 25 до 40 компании, избрани врз основа на нивниот долгорочен потенцијал.
                 </p>
               </div>
             </div>
@@ -41,13 +39,12 @@ const Stats = () => {
             <div className="flex flex-col gap-1 w-full md:w-[300px]">
               <div className="flex justify-center items-center p-2">
                 <h3 className="font-lora text-2xl md:text-3xl lg:text-[32px] font-bold text-[#1F1514] leading-[1.28]">
-                  10.000+ корисници
+                  Искуство
                 </h3>
               </div>
               <div className="px-2">
                 <p className="font-inter text-base text-[#1F1514] font-normal leading-[1.5]">
-                  Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед
-                  до еиусмод темпор
+                  Нашиот тим има преку 10 години искуство и извонредни резултати во управувањето со средства.
                 </p>
               </div>
             </div>

@@ -61,8 +61,7 @@ const Radar = () => {
               className="text-sm sm:text-base md:text-lg lg:text-xl text-[#1F1514] font-light mb-4 sm:mb-5 md:mb-6 max-w-2xl mx-auto lg:mx-0"
               style={{ lineHeight: "1.4em" }}
             >
-              Развивме модел за оценување на инвестициски рејтинг на компаниите,
-              заснован на 125 коефициенти распределени во пет категории:
+              Опфолио Радар е напреден модел создаден за проценка на инвестицискиот рејтинг на компаниите. Овој модел се базира на 125 внимателно одбрани коефициенти, кои се распоредени во шест главни категории:
             </p>
             <ul className="flex flex-col gap-1 sm:gap-2 list-none pl-0">
               {categories.map((category, index) => (
