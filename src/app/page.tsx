@@ -3,7 +3,6 @@ import Stats from "./components/Stats";
 import Products from "./components/Products";
 import Radar from "./components/Radar";
 import Invest from "./components/Invest";
-import Ceo from "./components/Ceo";
 import Consultation from "./components/Consultation";
 import Image from "next/image";
 
@@ -42,7 +41,7 @@ export default function Home() {
         </div>
         {/* Content with gradient background */}
         <div className="relative z-10">
-          <Ceo />
+          {/* <Ceo /> */}
           <Consultation />
         </div>
       </div>

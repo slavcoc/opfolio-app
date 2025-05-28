@@ -5,13 +5,11 @@ import Image from "next/image";
 
 const Consultation = () => {
   return (
-    <section className="w-full py-16 md:py-20 lg:py-24 bg-[#F3F0E6] relative overflow-hidden">
-      <Image
-        src="/consultation-bg.png"
+    <section className="w-full py-16 md:py-20 lg:py-24 bg-[#F3F0E6] relative overflow-hidden relative">
+      <img
+        src="/Gradient_1_transp.png"
         alt="Consultation background"
-        width={1444}
-        height={1000}
-        className="object-fit absolute left-0 bottom-0 w-[80%] h-[100%] opacity-20"
+        className="absolute flexShrink-0 bottom-0 left-[-35%] bottom-0 rotate-[180deg] w-full h-full "
       />
 
       {/* CEO */}

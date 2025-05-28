@@ -24,12 +24,12 @@ const Products = () => {
       description:
         "Развиваме персонализирани инвестициски стратегии, прилагодени на вашите уникатни цели, хоризонт и толеранција на ризик.",
       link: "/products/portfolio-management",
-      icon: "/portfolio-management-icon.svg",
+      icon: "/upravuvanje-rizici.svg",
     },
   ];
 
   return (
-    <section className="w-full py-10 sm:py-12 md:py-16 lg:py-24 ">
+    <section className="w-full py-10 sm:py-12 md:py-16 lg:py-24 relative">
       {/* Content */}
       <div className="max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px]">
         {/* Section Header */}
@@ -43,14 +43,19 @@ const Products = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-8 w-full relative">
+        <div className="absolute bottom-8 md:ml-[-19%] md:mr-[-19%]  ">
+        <img  src={`/product-line-full.png`} alt="Arrow right"/>
+        </div> 
           {/* Card 1 */}
           {products.map((product, index) => {
             return (
               <div
-                className="w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col gap-6 sm:gap-8"
+                className="w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col gap-6 sm:gap-8 relative"
                 key={`${index}${product.title}`}
               >
+               
+                {/* {index === 2 && <img className="absolute bottom-[30%] right-[-16.5em]" src={`/product-line-after.png`} alt="Arrow right"/>} */}
                 <Image
                   src={product.icon}
                   alt={product.title}

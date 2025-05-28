@@ -33,3 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 .font-kazimir {
   font-family: 'Kazimir-Bold', sans-serif;
 }
+
+.element-hidden-effect {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.element-hidden-effect.visible {
+  opacity: 1;
+}

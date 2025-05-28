@@ -74,7 +74,7 @@ const Navigation = () => {
             </Link>
             {isProductsOpen && (
               <div
-                className="fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2"
+                className={`fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2`}
                 onMouseEnter={() => setIsProductsOpen(true)}
                 onMouseLeave={() => setIsProductsOpen(false)}
               >
