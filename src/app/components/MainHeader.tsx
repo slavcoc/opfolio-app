@@ -8,7 +8,7 @@ const MainHeader = () => {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <header className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center">
+    <section className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center">
       {/* Content */}
       <div className="relative z-10 max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[120px] w-full">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8 md:gap-12 lg:gap-16">
@@ -52,7 +52,7 @@ const MainHeader = () => {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 

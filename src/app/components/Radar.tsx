@@ -12,7 +12,7 @@ const Radar = () => {
   ];
 
   return (
-    <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 xl:py-24 bg-[#F3F0E6]">
+    <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 xl:py-24">
       <div className="max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px]">
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16">
           {/* Image - Left side */}

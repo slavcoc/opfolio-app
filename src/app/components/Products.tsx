@@ -29,7 +29,7 @@ const Products = () => {
   ];
 
   return (
-    <section className="w-full py-10 sm:py-12 md:py-16 lg:py-24 bg-[#F3F0E6]">
+    <section className="w-full py-10 sm:py-12 md:py-16 lg:py-24 ">
       {/* Content */}
       <div className="max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px]">
         {/* Section Header */}

@@ -166,7 +166,7 @@ const Navigation = () => {
             )}
           </div>
 
-          <div className="relative">
+          {/* <div className="relative">
             <Link href={"/education"}>
               <button
                 className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors cursor-pointer"
@@ -208,14 +208,14 @@ const Navigation = () => {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
 
-          <Link
+          {/* <Link
             href="/blog"
             className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
           >
             Блог
-          </Link>
+          </Link> */}
 
           <Link
             href="/calculator"
@@ -228,7 +228,7 @@ const Navigation = () => {
             href="/about"
             className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
           >
-            За Нас
+            За Компанијата
           </Link>
         </div>
 
@@ -302,7 +302,7 @@ const Navigation = () => {
               )}
             </div>
 
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
               <button
                 className="px-4 py-2 text-[#1F1514] font-medium"
                 onClick={() => setIsEducationOpen(!isEducationOpen)}
@@ -331,14 +331,14 @@ const Navigation = () => {
                   </Link>
                 </div>
               )}
-            </div>
+            </div> */}
 
-            <Link
+            {/* <Link
               href="/blog"
               className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
             >
               Блог
-            </Link>
+            </Link> */}
             <Link
               href="/calculator"
               className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
@@ -349,7 +349,7 @@ const Navigation = () => {
               href="/about"
               className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
             >
-              За Нас
+              За Компанијата
             </Link>
 
             <div className="flex flex-col gap-2 mt-4">

@@ -13,16 +13,13 @@ export default function Home() {
       <div className="relative w-full overflow-hidden">
         {/* Background gradient container */}
         <Image
-          src="/background-gradient.png"
+          src="/Gradient_1_transp.png"
           alt="Background gradient"
-          className="object-cover w-full h-full absolute top-0 right-0 h-full w-full opacity-50"
+          className=" absolute top-0 right-0 h-full w-full z-10"
           fill
-        />
-        {/* Content with gradient background */}
-        <div className="relative z-10">
+        />       
           <MainHeader />
           <Stats />
-        </div>
       </div>
       <div className="w-full">
         <Products />
