@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const Navigation = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const [isEducationOpen, setIsEducationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -18,7 +17,7 @@ const Navigation = () => {
       <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/">
+          <Link href="/" className="logo">
             <Image
               src="/logo.svg"
               alt="Opfolio Logo"
@@ -62,7 +61,7 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
-          <div className="relative ">
+          <div className="relative nav-item">
             <Link href={"/products"}>
               <button
                 className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors cursor-pointer"
@@ -72,98 +71,99 @@ const Navigation = () => {
                 Продукти
               </button>
             </Link>
-            {isProductsOpen && (
-              <div
-                className={`fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2`}
-                onMouseEnter={() => setIsProductsOpen(true)}
-                onMouseLeave={() => setIsProductsOpen(false)}
-              >
-                <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
-                  <div className="flex gap-16">
-                    <div className="flex flex-col gap-2">
-                      <Link
-                        href="/products/stocks"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Акции
-                      </Link>
-                      <Link
-                        href="/products/funds"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Инвестициски фондови
-                      </Link>
-                      <Link
-                        href="/products/mse"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Македонска берза
-                      </Link>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <Link
-                        href="/products/dividend"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Дивиденда
-                      </Link>
-                      <Link
-                        href="/products/trading"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Тргување со акции
-                      </Link>
-                      <Link
-                        href="/products/bonds"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Обврзници
-                      </Link>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <Link
-                        href="/products/securities"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Хартии од вредност
-                      </Link>
-                      <Link
-                        href="/products/bond-types"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Видови обврзници
-                      </Link>
-                      <Link
-                        href="/products/stock-index"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Берзански индекс
-                      </Link>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <Link
-                        href="/products/income"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Приход
-                      </Link>
-                      <Link
-                        href="/products/diversification"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Диверзификација
-                      </Link>
-                      <Link
-                        href="/products/inflation"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Инфлација
-                      </Link>
-                    </div>
+            
+            <div
+              className={`nav-dropdown fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2 transition-all duration-300 ${
+                isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
+              onMouseEnter={() => setIsProductsOpen(true)}
+              onMouseLeave={() => setIsProductsOpen(false)}
+            >
+              <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
+                <div className="flex gap-16">
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      href="/products/stocks"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Акции
+                    </Link>
+                    <Link
+                      href="/products/funds"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Инвестициски фондови
+                    </Link>
+                    <Link
+                      href="/products/mse"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Македонска берза
+                    </Link>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      href="/products/dividend"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Дивиденда
+                    </Link>
+                    <Link
+                      href="/products/trading"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Тргување со акции
+                    </Link>
+                    <Link
+                      href="/products/bonds"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Обврзници
+                    </Link>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      href="/products/securities"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Хартии од вредност
+                    </Link>
+                    <Link
+                      href="/products/bond-types"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Видови обврзници
+                    </Link>
+                    <Link
+                      href="/products/stock-index"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Берзански индекс
+                    </Link>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      href="/products/income"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Приход
+                    </Link>
+                    <Link
+                      href="/products/diversification"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Диверзификација
+                    </Link>
+                    <Link
+                      href="/products/inflation"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                    >
+                      Инфлација
+                    </Link>
                   </div>
                 </div>
               </div>
-            )}
+            </div>
           </div>
 
           {/* <div className="relative">
@@ -236,13 +236,13 @@ const Navigation = () => {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/login"
-            className="px-6 py-4 border border-[#1F1514] rounded-xl text-[#1F1514] hover:bg-[#1F1514] hover:text-white transition-colors"
+            className="cta-button px-6 py-4 border border-[#1F1514] rounded-xl text-[#1F1514] bg-transparent"
           >
             Најави се
           </Link>
           <Link
             href="/register"
-            className="px-6 py-4 bg-[#F5C322] rounded-xl text-[#1F1514] hover:bg-[#1F1514] hover:text-white transition-colors"
+            className="cta-button px-6 py-4 bg-[#F5C322] rounded-xl text-[#1F1514]"
           >
             Започни
           </Link>

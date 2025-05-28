@@ -51,7 +51,7 @@ const Products = () => {
           {products.map((product, index) => {
             return (
               <div
-                className="w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col gap-6 sm:gap-8 relative"
+                className="product-card w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col gap-6 sm:gap-8 relative"
                 key={`${index}${product.title}`}
               >
                
@@ -68,9 +68,9 @@ const Products = () => {
                 <p className="font-inter text-sm sm:text-base leading-[1.375] text-black">
                   {product.description}
                 </p>
-                <div className="flex items-center gap-1  pb-20">
+                <div className="flex items-center gap-1 pb-20">
                   <Link href={product.link}>
-                    <div className="flex items-center cursor-pointer">
+                    <div className="learn-more flex items-center cursor-pointer">
                       <span className="font-raleway font-semibold text-sm leading-[1.17] text-black">
                         Дознај повеќе
                       </span>

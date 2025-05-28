@@ -42,3 +42,115 @@ h1, h2, h3, h4, h5, h6 {
 .element-hidden-effect.visible {
   opacity: 1;
 }
+
+/* Navigation Menu Animation */
+.nav-dropdown {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #F5C322;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Product Card Animation */
+.product-card {
+  transition: all 0.9s ease;
+}
+
+.product-card:hover {
+    background: rgba(210, 210, 210, 0.4);
+   .learn-more {
+    gap: 8px;
+   }
+}
+
+/* Learn More Link Animation */
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.3s ease;
+}
+
+.learn-more:hover {
+  gap: 8px;
+}
+
+.learn-more svg {
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover svg {
+  transform: rotate(45deg);
+}
+
+/* CTA Button Animation */
+.cta-button {
+  transition: all 0.3s ease;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #1F1514;
+}
+
+.cta-button:hover {
+  background: #FFFFFF;
+  color: #F5C322;
+  border-color: #F5C322;
+}
+
+/* Background Pattern Animation */
+.pattern {
+  background: linear-gradient(90deg, #E6E7E5 0%, #5A7D7C 50%, #E6E7E5 100%);
+  background-size: 200% 100%;
+  animation: patternMove 15s linear infinite;
+}
+
+@keyframes patternMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Logo Animation */
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo path {
+  transition: fill 0.3s ease;
+}
+
+.logo:hover path {
+  fill: #F5C324;
+}
