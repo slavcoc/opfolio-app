@@ -99,13 +99,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 8px;
 }
 
-.learn-more svg {
-  transition: transform 0.3s ease;
-}
-
-.learn-more:hover svg {
-  transform: rotate(45deg);
-}
 
 /* CTA Button Animation */
 .cta-button {
