@@ -13,7 +13,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="w-full bg-[#F3F0E6] border-b border-[#F5C322] relative z-50">
+    <nav className="w-full bg-[#F3F0E6] border-b border-[#F5C322] sticky top-0 z-50">
       <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -73,7 +73,7 @@ const Navigation = () => {
             </Link>
             
             <div
-              className={`nav-dropdown fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2 transition-all duration-300 ${
+              className={`nav-dropdown fixed left-0 right-0 top-[106px] w-full bg-white shadow-lg z-50 pt-2 transition-all duration-300 ${
                 isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
               }`}
               onMouseEnter={() => setIsProductsOpen(true)}
