@@ -10,6 +10,12 @@ section {
   background: var(--background);
 }
 
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -46,32 +52,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation Menu Animation */
 .nav-dropdown {
   opacity: 0;
-  transform: top(-50px);
-  transition: all 0.6s ease-in-out;
-  
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2),
+              0px 3px 14px 0px rgba(0, 0, 0, 0.12),
+              0px 8px 10px 0px rgba(0, 0, 0, 0.14);
 }
 
-.nav-item:hover .nav-dropdown {
+.nav-dropdown.visible {
   opacity: 1;
-  -webkit-animation: slide-down .5s ease-out;
-    -moz-animation: slide-down .5s ease-out;
-}
-
-@-webkit-keyframes slide-down {
-  0% { opacity: 0; -webkit-transform: top(0px); } 
-  20% { opacity: 0; -webkit-transform: top(20px); }
-  40% { opacity: 0; -webkit-transform: top(40px); }
-  60% { opacity: 0; -webkit-transform: top(60px); }
-  80% { opacity: 0; -webkit-transform: top(80px); }
-100% { opacity: 1; -webkit-transform: top(130px);}
-}
-@-moz-keyframes slide-down {
-  0% { opacity: 0; -moz-transform: top(0px); } 
-  20% { opacity: 0; -moz-transform: top(20px); }
-  40% { opacity: 0; -moz-transform: top(40px); }
-  60% { opacity: 0; -moz-transform: top(60px); }
-  80% { opacity: 0; -moz-transform: top(80px); }
-100% { opacity: 1; -moz-transform: top(130px);}
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav-item {
@@ -84,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 0;
   height: 1px;
   background: #F5C322;
-  transition: width 0.8s ease;
+  transition: width 0.3s ease;
   position: absolute;
   bottom: 0;
   left: 0;

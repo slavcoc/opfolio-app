@@ -73,7 +73,7 @@ const Navigation = () => {
             </Link>
             
             <div
-              className={`nav-dropdown fixed left-0 right-0 top-[106px] w-full bg-white shadow-lg z-50 pt-2 transition-all duration-300 ${
+              className={`nav-dropdown fixed left-0 right-0 top-[106px] w-full bg-[#E6E7E5] shadow-lg z-50 transition-all duration-300 ${
                 isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
               }`}
               onMouseEnter={() => setIsProductsOpen(true)}
@@ -81,82 +81,86 @@ const Navigation = () => {
             >
               <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
                 <div className="flex gap-16">
-                  <div className="flex flex-col gap-2">
+                  {/* First Column */}
+                  <div className="flex flex-col">
                     <Link
-                      href="/products/stocks"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      href="/products"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
                     >
-                      Акции
+                      Opfolio
                     </Link>
                     <Link
                       href="/products/funds"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514]"
                     >
                       Инвестициски фондови
                     </Link>
                     <Link
                       href="/products/mse"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514]"
                     >
                       Македонска берза
                     </Link>
                   </div>
-                  <div className="flex flex-col gap-2">
+
+                  {/* Divider */}
+                  <div className="w-[1px] h-[169px] pattern"></div>
+
+                  {/* Second Column */}
+                  <div className="flex flex-col">
                     <Link
-                      href="/products/dividend"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      href="/products/documents"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
                     >
-                      Дивиденда
+                      Документи
                     </Link>
                     <Link
                       href="/products/trading"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514]"
                     >
                       Тргување со акции
                     </Link>
                     <Link
                       href="/products/bonds"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514]"
                     >
                       Обврзници
                     </Link>
                   </div>
-                  <div className="flex flex-col gap-2">
+
+                  {/* Divider */}
+                  <div className="w-[1px] h-[169px] pattern"></div>
+
+                  {/* Third Column */}
+                  <div className="flex flex-col">
                     <Link
-                      href="/products/securities"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      href="/education"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
                     >
-                      Хартии од вредност
-                    </Link>
-                    <Link
-                      href="/products/bond-types"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Видови обврзници
+                      Едукација
                     </Link>
                     <Link
                       href="/products/stock-index"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514]"
                     >
                       Берзански индекс
                     </Link>
                   </div>
-                  <div className="flex flex-col gap-2">
+
+                  {/* Divider */}
+                  <div className="w-[1px] h-[169px] pattern"></div>
+
+                  {/* Fourth Column */}
+                  <div className="flex flex-col">
                     <Link
-                      href="/products/income"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      href="/blog"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
                     >
-                      Приход
-                    </Link>
-                    <Link
-                      href="/products/diversification"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                    >
-                      Диверзификација
+                      Блог
                     </Link>
                     <Link
                       href="/products/inflation"
-                      className="px-6 py-4 hover:bg-[#F5C322] rounded"
+                      className="px-6 py-4 hover:bg-[#F5C322] rounded text-[#1F1514]"
                     >
                       Инфлација
                     </Link>
@@ -251,94 +255,85 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white p-4 shadow-lg">
+        <div className="lg:hidden bg-[#E6E7E5] p-4 shadow-lg">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <button
-                className="px-4 py-2 text-[#1F1514] font-medium"
+                className="px-4 py-2 text-[#1F1514] font-medium flex items-center justify-between"
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
               >
-                Продукти {isProductsOpen ? "▼" : "▶"}
+                <span>Продукти</span>
+                <span>{isProductsOpen ? "▼" : "▶"}</span>
               </button>
               {isProductsOpen && (
                 <div className="pl-4 flex flex-col gap-2">
                   <Link
-                    href="/products/stocks"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
+                    href="/products"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
                   >
-                    Акции
+                    Opfolio
                   </Link>
                   <Link
                     href="/products/funds"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
                   >
                     Инвестициски фондови
                   </Link>
                   <Link
                     href="/products/mse"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
                   >
                     Македонска берза
                   </Link>
+                  <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
                   <Link
-                    href="/products/dividend"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
+                    href="/products/documents"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
                   >
-                    Дивиденда
+                    Документи
                   </Link>
                   <Link
                     href="/products/trading"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
                   >
                     Тргување со акции
                   </Link>
                   <Link
                     href="/products/bonds"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
                   >
                     Обврзници
+                  </Link>
+                  <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
+                  <Link
+                    href="/education"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
+                  >
+                    Едукација
+                  </Link>
+                  <Link
+                    href="/products/stock-index"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
+                  >
+                    Берзански индекс
+                  </Link>
+                  <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
+                  <Link
+                    href="/blog"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
+                  >
+                    Блог
+                  </Link>
+                  <Link
+                    href="/products/inflation"
+                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
+                  >
+                    Инфлација
                   </Link>
                 </div>
               )}
             </div>
 
-            {/* <div className="flex flex-col gap-2">
-              <button
-                className="px-4 py-2 text-[#1F1514] font-medium"
-                onClick={() => setIsEducationOpen(!isEducationOpen)}
-              >
-                Едукација {isEducationOpen ? "▼" : "▶"}
-              </button>
-              {isEducationOpen && (
-                <div className="pl-4 flex flex-col gap-2">
-                  <Link
-                    href="/education/money-fund"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
-                  >
-                    Паричен фонд
-                  </Link>
-                  <Link
-                    href="/education/progressive-fund"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
-                  >
-                    Прогресивен фонд
-                  </Link>
-                  <Link
-                    href="/education/investment-funds"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded"
-                  >
-                    Инвестициски фондови
-                  </Link>
-                </div>
-              )}
-            </div> */}
-
-            {/* <Link
-              href="/blog"
-              className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
-            >
-              Блог
-            </Link> */}
             <Link
               href="/calculator"
               className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
