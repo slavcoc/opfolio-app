@@ -17,32 +17,24 @@ const Radar = () => {
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16">
           {/* Image - Left side */}
           <div className="flex-1 relative order-2 lg:order-1 w-full max-w-[500px] lg:max-w-none mx-auto">
-            <div className="relative w-full aspect-[4/3] rounded-[20px] overflow-hidden">
+            <div className="relative w-full aspect-[4/3]  overflow-hidden">
               {/* Pattern top border */}
               <div
-                className="absolute inset-0 border border-[#F5C322] rounded-[20px]"
-                style={{ borderWidth: "1px" }}
+                className="absolute inset-0 "
               />
 
               {/* Pattern bottom border */}
-              <div
-                className="absolute inset-0 border border-[#F5C322] rounded-[19.94px] transform rotate-180"
-                style={{ borderWidth: "0.997px" }}
-              />
 
               {/* Image container with shadow */}
               <div
-                className="absolute inset-0 rounded-[19.34px] overflow-hidden"
-                style={{
-                  boxShadow:
-                    "3.97px 11.1px 25.38px 0px rgba(0, 0, 0, 0.1), 14.27px 43.62px 45.99px 0px rgba(0, 0, 0, 0.09), 32.51px 97.54px 61.85px 0px rgba(0, 0, 0, 0.05), 57.1px 173.67px 72.96px 0px rgba(0, 0, 0, 0.01), 89.61px 271.21px 80.09px 0px rgba(0, 0, 0, 0)",
-                }}
+                className="absolute inset-0  overflow-hidden"
+                
               >
                 <Image
-                  src="/macbook-radar.png"
+                  src="/raitin-pie.GIF"
                   alt="Opfolio Radar MacBook"
                   fill
-                  className="object-cover"
+                  className="object-fit p-2"
                   priority
                 />
               </div>

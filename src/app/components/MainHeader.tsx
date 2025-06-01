@@ -33,13 +33,13 @@ const MainHeader = () => {
           {/* Hero Image */}
           <div className="flex-1 w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-none">
             {!imageError ? (
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] bg-white rounded-lg sm:rounded-xl md:rounded-2xl border border-[#F5C322] shadow-[3.97px_11.1px_25.38px_rgba(0,0,0,0.1),14.27px_43.62px_45.99px_rgba(0,0,0,0.09),32.51px_97.54px_61.85px_rgba(0,0,0,0.05),57.1px_173.67px_72.96px_rgba(0,0,0,0.01),89.61px_271.21px_80.09px_rgba(0,0,0,0)]">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#F3F0E6] to-[#2D445A] opacity-5 rounded-lg sm:rounded-xl md:rounded-2xl" />
+              <div className="relative w-full h-full sm:h-[350px] md:h-[400px] rounded-lg sm:rounded-xl md:rounded-2xl ">
                 <Image
-                  src="/hero.png"
+                  src="/hero-pie.GIF"
                   alt="Hero Image"
-                  fill
-                  className="object-contain rounded-lg sm:rounded-xl md:rounded-2xl object-cover"
+                  width={400}
+                  height={400}
+                  // className="mt-[-10%]"
                   priority
                   onError={() => setImageError(true)}
                 />
