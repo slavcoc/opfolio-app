@@ -34,7 +34,7 @@ const Invest = () => {
           <div className="flex-1 relative order-2 w-full max-w-[500px] lg:max-w-none mx-auto">
                       
                 <img
-                  src="/opfolio-invest-pie.GIF"
+                  src="./opfolio-invest-pie.GIF"
                   alt="Opfolio Invest MacBook"
                   width={'100%'}
                   height={'100%'}

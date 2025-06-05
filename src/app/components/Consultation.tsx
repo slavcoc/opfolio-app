@@ -7,7 +7,7 @@ const Consultation = () => {
   return (
     <section className="w-full py-16 md:py-20 lg:py-24 bg-[#F3F0E6] relative overflow-hidden relative">
       <img
-        src="/Gradient_1_transp.png"
+        src="./Gradient_1_transp.png"
         alt="Consultation background"
         className="absolute flexShrink-0 bottom-0 left-[-35%] bottom-0 rotate-[180deg] w-full h-full "
       />
@@ -21,7 +21,7 @@ const Consultation = () => {
               <div className="absolute inset-0 p-1.5 sm:p-2">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
-                    src="/vasko-ceo.png"
+                    src="./vasko-ceo.png"
                     alt="Vasko Bogatinovski"
                     fill
                     className="object-cover"
@@ -38,7 +38,7 @@ const Consultation = () => {
               <div className="flex flex-col gap-1.5 sm:gap-2">
                 <div className="relative">
                   <Image
-                    src="/quote-icon.png"
+                    src="./quote-icon.png"
                     alt="Quote"
                     width={30}
                     height={30}

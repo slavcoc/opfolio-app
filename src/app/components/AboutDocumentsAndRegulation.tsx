@@ -11,7 +11,7 @@ const AboutDocumentsAndRegulation: React.FC = () => {
       */}
       <div className="absolute right-0 bottom-0 w-[50%] h-[100%] z-[1]">
         <Image
-          src="/documents-right-line.png"
+          src="./documents-right-line.png"
           alt="Documents rigt lines"
           fill
           className="object-cover"
@@ -19,7 +19,7 @@ const AboutDocumentsAndRegulation: React.FC = () => {
       </div>
       <div className="absolute left-0 bottom-0 w-[40%] h-[100%] z-[1]">
         <Image
-          src="/documents-left-line.png"
+          src="./documents-left-line.png"
           alt="Documents left lines"
           fill
           className="object-cover"

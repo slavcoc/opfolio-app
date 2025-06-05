@@ -22,7 +22,7 @@ const AboutContact: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 flex items-center justify-center">
                       <Image
-                        src="/images/icons/mobile-icon.svg"
+                        src="./images/icons/mobile-icon.svg"
                         alt="Phone"
                         width={24}
                         height={24}
@@ -36,7 +36,7 @@ const AboutContact: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 flex items-center justify-center">
                       <Image
-                        src="/images/icons/mail-icon.svg"
+                        src="./images/icons/mail-icon.svg"
                         alt="Email"
                         width={24}
                         height={24}
@@ -59,7 +59,7 @@ const AboutContact: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 flex items-center justify-center">
                       <Image
-                        src="/images/icons/house-icon.svg"
+                        src="./images/icons/house-icon.svg"
                         alt="Address"
                         width={24}
                         height={24}
@@ -73,7 +73,7 @@ const AboutContact: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 flex items-center justify-center opacity-0">
                       <Image
-                        src="/images/icons/house-icon.svg"
+                        src="./images/icons/house-icon.svg"
                         alt="City"
                         width={24}
                         height={24}
@@ -93,7 +93,7 @@ const AboutContact: React.FC = () => {
           <div className="flex-1">
             <div className="relative w-full aspect-[1.64] rounded-[13px] overflow-hidden">
               <Image
-                src="/images/map.jpg"
+                src="./images/map.jpg"
                 alt="Map"
                 fill
                 className="object-cover"

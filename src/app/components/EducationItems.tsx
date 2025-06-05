@@ -94,7 +94,7 @@ export default function EducationItems() {
             >
               <div className="absolute right-0 bottom-0 w-full h-full">
                 <Image
-                  src="/education-lines.png"
+                  src="./education-lines.png"
                   alt="Education Item"
                   fill
                   className="object-cover"

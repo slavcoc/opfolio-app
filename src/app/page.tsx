@@ -12,7 +12,7 @@ export default function Home() {
       <div className="relative w-full overflow-hidden">
         {/* Background gradient container */}
         <Image
-          src="/Gradient_1_transp.png"
+          src="./Gradient_1_transp.png"
           alt="Background gradient"
           className=" absolute top-0 right-0 h-full w-full z-10"
           fill
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <div className="relative w-full h-full">
             <Image
-              src="/background-gradient-ceo.png"
+              src="./background-gradient-ceo.png"
               alt="Background gradient"
               className="w-full h-full object-cover"
               fill

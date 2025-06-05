@@ -40,7 +40,7 @@ const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
               <div className="p-4 sm:p-6 md:p-8 relative">
                 <div className="absolute right-0 bottom-0 w-52 h-52">
                   <Image
-                    src="/blog-lines.png"
+                    src="/.blog-lines.png"
                     alt="Blog Item"
                     fill
                     className=""

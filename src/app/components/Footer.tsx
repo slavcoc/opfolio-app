@@ -79,7 +79,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="w-full lg:w-auto">
             <Image
-              src="/logo.svg"
+              src="./logo.svg"
               alt="Opfolio Logo"
               width={120}
               height={40}

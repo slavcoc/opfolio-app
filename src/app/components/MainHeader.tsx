@@ -33,7 +33,7 @@ const MainHeader = () => {
           <div className="flex-1 w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-none">
             {!imageError ? (
                 <img
-                  src="/hero-pie.GIF"
+                  src="./hero-pie.GIF"
                   alt="Hero Image"
                   width={'100%'}
                   height={'100%'}

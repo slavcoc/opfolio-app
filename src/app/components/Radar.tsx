@@ -30,7 +30,7 @@ const Radar = () => {
                 
               >
                 <img
-                  src="/raitin-pie.GIF"
+                  src="./raitin-pie.GIF"
                   alt="Opfolio Radar MacBook"
                   className="object-fit p-2"
                 />

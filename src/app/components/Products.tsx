@@ -10,21 +10,21 @@ const Products = () => {
       description:
         "Дизајниран да обезбеди стабилен раст и високо ниво на сигурност за вашиот капитал.",
       link: "/products/money-fund",
-      icon: "/paricen-fond-icon.svg",
+      icon: "./paricen-fond-icon.svg",
     },
     {
       title: "Акциски фонд",
       description:
         "Дизајниран за инвеститори кои сакаат да го зголемат својот капитал преку внимателно избрани можности со висок потенцијал.",
       link: "/products/stock-fund",
-      icon: "/akciski-fond-icon.svg",
+      icon: "./akciski-fond-icon.svg",
     },
     {
       title: "Управување со портфолио",
       description:
         "Развиваме персонализирани инвестициски стратегии, прилагодени на вашите уникатни цели, хоризонт и толеранција на ризик.",
       link: "/products/portfolio-management",
-      icon: "/upravuvanje-rizici.svg",
+      icon: "./upravuvanje-rizici.svg",
     },
   ];
 
@@ -46,7 +46,7 @@ const Products = () => {
         {/* Product Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-8 w-full relative">
         <div className="absolute bottom-8 md:ml-[-19%] md:mr-[-19%]  ">
-        <img  src={`/product-line-full.png`} alt="Arrow right"/>
+        <img  src={`./product-line-full.png`} alt="Arrow right"/>
         </div> 
           {/* Card 1 */}
           {products.map((product, index) => {

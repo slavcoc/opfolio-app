@@ -16,7 +16,7 @@ const BlogChildFeatured = () => {
         {/* Example: <img src={Pattern1} alt="Pattern" className="absolute top-0 left-0 w-40 h-40 opacity-30" /> */}
         {/* Add more patterns as needed for the background */}
         <Image
-          src="/blog-slug-cap.png"
+          src="/.blog-slug-cap.png"
           alt="Blog Featured Background"
           fill
           className="object-fit"

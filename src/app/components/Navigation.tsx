@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center">
           <Link href="/" className="logo">
             <Image
-              src="/logo.svg"
+              src="./logo.svg"
               alt="Opfolio Logo"
               width={120}
               height={40}

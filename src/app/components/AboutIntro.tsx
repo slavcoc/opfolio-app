@@ -35,7 +35,7 @@ const AboutIntro = () => {
       </div>
       <div className="absolute right-0 bottom-0 w-[50%] h-[100%] z-[1]">
         <Image
-          src="/forus-lines.png"
+          src="./forus-lines.png"
           alt="For us Item"
           fill
           className="object-cover"
@@ -44,7 +44,7 @@ const AboutIntro = () => {
       {/* Team photo */}
       <div className="absolute right-0 bottom-0 w-[50%] h-[90%] z-[1]">
         <Image
-          src="/team-photo.png"
+          src="./team-photo.png"
           alt="Theam photo"
           fill
           className="object-cover"
