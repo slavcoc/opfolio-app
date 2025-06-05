@@ -4,7 +4,6 @@ import AboutMissionAndVision from "@/app/components/AboutMissionAndVision";
 import AboutOpfolio from "@/app/components/AboutOpfolio";
 import AboutCeo from "@/app/components/AboutCeo";
 import AboutTeamHierarchy from "@/app/components/AboutTeamHierarchy";
-import AboutContact from "@/app/components/AboutContact";
 import AboutDocumentsAndRegulation from "@/app/components/AboutDocumentsAndRegulation";
 
 export const metadata = {
@@ -33,9 +32,6 @@ export default function AboutPage() {
       </div>
       <div className="w-full">
         <AboutDocumentsAndRegulation />
-      </div>
-      <div className="w-full">
-        {/* <AboutContact /> */}
       </div>
     </main>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-
+/* eslint-disable react/no-unescaped-entities */ 
 const AboutOpfolio: React.FC = () => {
   return (
     <section className="bg-[#F3F0E6] py-12 sm:py-16 md:py-20">
