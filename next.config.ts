@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: 'build',
+  basePath: process.env.PAGES_BASE_PATH,
   output: 'export',
+  distDir: 'build',
   images: {
     unoptimized: true,
   },
