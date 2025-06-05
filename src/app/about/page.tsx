@@ -35,7 +35,7 @@ export default function AboutPage() {
         <AboutDocumentsAndRegulation />
       </div>
       <div className="w-full">
-        <AboutContact />
+        {/* <AboutContact /> */}
       </div>
     </main>
   );

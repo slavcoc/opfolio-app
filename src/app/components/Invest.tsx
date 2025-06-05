@@ -33,36 +33,16 @@ const Invest = () => {
 
           {/* Image - Right side */}
           <div className="flex-1 relative order-2 w-full max-w-[500px] lg:max-w-none mx-auto">
-            <div className="relative w-full aspect-[4/3] rounded-[20px] overflow-hidden">
-              {/* Pattern top border */}
-              <div
-                className="absolute inset-0 border border-[#F5C322] rounded-[20px]"
-                style={{ borderWidth: "1px" }}
-              />
-
-              {/* Pattern bottom border */}
-              <div
-                className="absolute inset-0 border border-[#F5C322] rounded-[19.94px] transform rotate-180"
-                style={{ borderWidth: "0.997px" }}
-              />
-
-              {/* Image container with shadow */}
-              <div
-                className="absolute inset-0 rounded-[19.34px] overflow-hidden"
-                style={{
-                  boxShadow:
-                    "3.97px 11.1px 25.38px 0px rgba(0, 0, 0, 0.1), 14.27px 43.62px 45.99px 0px rgba(0, 0, 0, 0.09), 32.51px 97.54px 61.85px 0px rgba(0, 0, 0, 0.05), 57.1px 173.67px 72.96px 0px rgba(0, 0, 0, 0.01), 89.61px 271.21px 80.09px 0px rgba(0, 0, 0, 0)",
-                }}
-              >
-                <Image
-                  src="/macbook-invest.png"
+                      
+                <img
+                  src="/opfolio-invest-pie.GIF"
                   alt="Opfolio Invest MacBook"
-                  fill
-                  className="object-cover"
-                  priority
+                  width={'100%'}
+                  height={'100%'}
+                  // priority
                 />
-              </div>
-            </div>
+              
+            
           </div>
         </div>
       </div>

@@ -17,6 +17,12 @@ const teamMembers: TeamMember[] = [
     linkedin: "https://linkedin.com/in/vasko-bogatinovski",
   },
   {
+    name: "Васко",
+    position: "CEO and Founder of Opfolio",
+    image: "/images/vasko.jpg",
+    linkedin: "https://linkedin.com/in/vasko",
+  },
+  {
     name: "Огнен",
     position: "CEO and Founder of Opfolio",
     image: "/images/ognen.jpg",
@@ -50,154 +56,100 @@ const AboutTeamHierarchy: React.FC = () => {
           Тимот на Opfolio
         </h2>
 
-        <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+        <div className="flex flex-col gap-[88px]">
           {/* First row - single member */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-[280px] sm:max-w-[300px]">
-              <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[175px] md:h-[175px] lg:w-[200px] lg:h-[200px] mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                <div className="absolute inset-0 bg-[#DADED5] rounded-full"></div>
-                <div
-                  className="absolute inset-0 border border-[#F5C322] rounded-full"
-                  style={{ borderWidth: "0.91px" }}
-                ></div>
-                <div className="absolute inset-0 overflow-hidden rounded-full">
-                  <Image
-                    src={teamMembers[0].image}
-                    alt={teamMembers[0].name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="font-inter font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-none text-black mb-1 sm:mb-2">
-                  {teamMembers[0].name}
-                </h3>
-                <p className="font-inter text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] leading-[1.6] text-black mb-3 sm:mb-4">
-                  {teamMembers[0].position}
-                </p>
-                {teamMembers[0].linkedin && (
-                  <Link
-                    href={teamMembers[0].linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
-                  >
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto bg-white rounded-full flex items-center justify-center">
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#0076B2"
-                        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                      >
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                      </svg>
-                    </div>
-                  </Link>
-                )}
-              </div>
+          {/* <div className="flex justify-center">
+            <div className="w-full max-w-[493px]">
+              <TeamMemberCard member={teamMembers[0]} />
             </div>
-          </div>
+          </div> */}
 
           {/* Second row - two members */}
-          <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-[24px]">
             {teamMembers.slice(1, 3).map((member, index) => (
-              <div
-                key={index}
-                className="w-full max-w-[280px] sm:max-w-[300px] mx-auto"
-              >
-                <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[175px] md:h-[175px] lg:w-[200px] lg:h-[200px] mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                  <div className="absolute inset-0 bg-[#DADED5] rounded-full"></div>
-                  <div className="absolute inset-0 border border-[#F5C322] rounded-full"></div>
-                  <div className="absolute inset-0 overflow-hidden rounded-full">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-inter font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-none text-black mb-1 sm:mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="font-inter text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] leading-[1.6] text-black mb-3 sm:mb-4">
-                    {member.position}
-                  </p>
-                  {member.linkedin && (
-                    <Link
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="#0076B2"
-                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                        >
-                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                      </div>
-                    </Link>
-                  )}
-                </div>
+              <div key={index} className="w-full max-w-[493px] mx-auto">
+                <TeamMemberCard member={member} />
               </div>
             ))}
           </div>
 
           {/* Third row - three members */}
-          <div className="flex flex-col md:flex-row justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-[24px]">
             {teamMembers.slice(3).map((member, index) => (
-              <div
-                key={index}
-                className="w-full max-w-[280px] sm:max-w-[300px] mx-auto"
-              >
-                <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[175px] md:h-[175px] lg:w-[200px] lg:h-[200px] mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                  <div className="absolute inset-0 bg-[#DADED5] rounded-full"></div>
-                  <div className="absolute inset-0 border border-[#F5C322] rounded-full"></div>
-                  <div className="absolute inset-0 overflow-hidden rounded-full">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-inter font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-none text-black mb-1 sm:mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="font-inter text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] leading-[1.6] text-black mb-3 sm:mb-4">
-                    {member.position}
-                  </p>
-                  {member.linkedin && (
-                    <Link
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="#0076B2"
-                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                        >
-                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                      </div>
-                    </Link>
-                  )}
-                </div>
+              <div key={index} className="w-full max-w-[493px] mx-auto">
+                <TeamMemberCard member={member} />
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
+  );
+};
+
+interface TeamMemberCardProps {
+  member: TeamMember;
+}
+
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
+  return (
+    <div className="relative h-[439px]">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2">
+        <div className="relative w-[260px] h-[260px]">
+          {/* Background circle */}
+          <div className="absolute inset-[11.86px] bg-[#DADED5] rounded-full" />
+          {/* Border circle */}
+          <div
+            className="absolute inset-0 rounded-full border border-[#F5C322]"
+            style={{ borderWidth: "0.91px" }}
+          />
+          {/* Image container */}
+          <div className="absolute left-[12px] top-[12px] w-[236.28px] h-[236.28px] overflow-hidden rounded-full">
+            <div className="relative w-[229px] h-[229px] mt-[7px] ml-[3px]">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom decorative border */}
+      <div className="absolute left-0 top-[129px] w-full h-[312px] border-[1px] border-[#5A7D7C] rounded-[12px]" />
+
+      {/* Member info */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-[298px] text-center">
+        <h3 className="font-inter font-semibold text-[32px] leading-none text-black mb-[16px]">
+          {member.name}
+        </h3>
+        <p className="font-inter text-[20px] leading-[1.6] text-black mb-[10px] max-w-[265px]">
+          {member.position}
+        </p>
+        {member.linkedin && (
+          <Link
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <div className="w-6 h-6 mx-auto bg-white rounded-full flex items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                width="22.875"
+                height="22.875"
+                fill="#0076B2"
+                className="translate-x-[0.5625px] translate-y-[0.5625px]"
+              >
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </div>
+          </Link>
+        )}
+      </div>
+    </div>
   );
 };
 

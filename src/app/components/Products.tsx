@@ -36,6 +36,7 @@ const Products = () => {
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
           <h2 className="font-lora text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-3 sm:mb-4">
             Продукти
+            
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#000000] font-light max-w-2xl mx-auto">
             Имајќи предвид дека финансиските потреби на секој инвеститор се уникатни, нудиме сеопфатен спектар на инвестициски решенија – од инвестициски фондови до целосно персонализирани портфолија усогласени со вашите цели и ризичен профил.
@@ -64,6 +65,9 @@ const Products = () => {
                 />
                 <h3 className="font-lora font-bold text-xl sm:text-2xl leading-[1.28] text-black">
                   {product.title}
+                  {index < 2 && <p className="font-inter text-sm sm:text-base leading-[1.375] text-black">
+                  (во основање)
+                </p>}
                 </h3>
                 <p className="font-inter text-sm sm:text-base leading-[1.375] text-black">
                   {product.description}
