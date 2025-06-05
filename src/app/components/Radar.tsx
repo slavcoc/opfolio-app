@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 const Radar = () => {
   const categories = [
@@ -30,12 +29,10 @@ const Radar = () => {
                 className="absolute inset-0  overflow-hidden"
                 
               >
-                <Image
+                <img
                   src="/raitin-pie.GIF"
                   alt="Opfolio Radar MacBook"
-                  fill
                   className="object-fit p-2"
-                  priority
                 />
               </div>
             </div>
