@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  basePath: process.env.PAGES_BASE_PATH,
+  basePath:isProduction ? '/opfolio-app' : '',
   output: 'export',
   distDir: 'build',
   images: {
