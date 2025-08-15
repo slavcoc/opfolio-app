@@ -1,14 +1,19 @@
 import MainHeader from "./components/MainHeader";
 import Stats from "./components/Stats";
 import Products from "./components/Products";
-import Radar from "./components/Radar";
 import Invest from "./components/Invest";
+import Radar from "./components/Radar";
 import Consultation from "./components/Consultation";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
+      {/* Test element to check if font-lora works */}
+      <div className="font-lora text-2xl p-4 bg-red-100">
+        Test: This should use Lora font
+      </div>
+      
       <div className="relative w-full overflow-hidden">
         {/* Background gradient container */}
         <Image
