@@ -63,11 +63,8 @@ const Products = () => {
                   width={48}
                   height={48}
                 />
-                <h3 className="font-lora font-bold text-xl sm:text-2xl leading-[1.28] text-black">
+                <h3 className="font-lora font-bold text-2xl sm:text-3xl leading-[1.28] text-black">
                   {product.title}
-                  {index < 2 && <p className="font-inter text-sm sm:text-base leading-[1.375] text-black">
-                  (во основање)
-                </p>}
                 </h3>
                 <p className="font-inter text-sm sm:text-base leading-[1.375] text-black">
                   {product.description}
@@ -76,7 +73,7 @@ const Products = () => {
                   <Link href={product.link}>
                     <div className="learn-more flex items-center cursor-pointer">
                       <span className="font-raleway font-semibold text-sm leading-[1.17] text-black">
-                        Дознај повеќе
+                      {index < 2 ? "Во основање" : "Дознај повеќе"}
                       </span>
                       <svg
                         width="20"

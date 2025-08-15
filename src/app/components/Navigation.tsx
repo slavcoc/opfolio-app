@@ -4,12 +4,93 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
+
 const Navigation = () => {
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Main navigation items
+  const mainNavItems = [
+    {
+      label: "За нас",
+      href: "/about-us",
+      hasDropdown: true,
+      dropdownColumns: [
+        [
+          { label: "Продукти", href: "/products", isBold: false },
+          { label: "Едукација", href: "/education", isBold: false },
+          { label: "Блог", href: "/blog", isBold: false },
+          { label: "Документи", href: "/products/documents", isBold: false },
+        ],
+      ],
+    },
+    // {
+    //   label: "Продукти",
+    //   href: "/products",
+    //   hasDropdown: true,
+    //   dropdownColumns: [
+    //     [
+    //       { label: "Opfolio", href: "/products", isBold: true },
+    //       { label: "Инвестициски фондови", href: "/products/funds", isBold: false },
+    //       { label: "Македонска берза", href: "/products/mse", isBold: false },
+    //     ],
+    //     [
+    //       { label: "Документи", href: "/products/documents", isBold: true },
+    //       { label: "Тргување со акции", href: "/products/trading", isBold: false },
+    //       { label: "Обврзници", href: "/products/bonds", isBold: false },
+    //     ],
+    //     [
+    //       { label: "Инвестициски фондови", href: "/products/funds", isBold: false },
+    //       { label: "Македонска берза", href: "/products/mse", isBold: false },
+    //       { label: "Едукација", href: "/education", isBold: true },
+    //       { label: "Берзански индекс", href: "/products/stock-index", isBold: false },
+    //     ],
+    //     [
+    //       { label: "Блог", href: "/blog", isBold: true },
+    //       { label: "Инфлација", href: "/products/inflation", isBold: false },
+    //     ],
+    //   ],
+    // },
+    {
+      label: "Калкулатор",
+      href: "/calculator",
+      hasDropdown: false,
+    },
+    // {
+    //   label: "За Компанијата",
+    //   href: "/about",
+    //   hasDropdown: false,
+    // },
+  ];
+
+  // Auth buttons
+  const authButtons = [
+    // {
+    //   label: "Најави се",
+    //   href: "/login",
+    //   variant: "outline" as const,
+    // },
+    {
+      label: "Контактирај не",
+      href: "/register",
+      variant: "primary",
+    },
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleDropdownToggle = (itemLabel: string) => {
+    setOpenDropdown(openDropdown === itemLabel ? null : itemLabel);
+  };
+
+  const handleDropdownMouseEnter = (itemLabel: string) => {
+    setOpenDropdown(itemLabel);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    setOpenDropdown(null);
   };
 
   return (
@@ -61,214 +142,81 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
-          <div className="relative nav-item">
-            <Link href={"/products"}>
-              <button
-                className="px-6 py-4 text-[#1F1514]  transition-colors cursor-pointer"
-                onMouseEnter={() => setIsProductsOpen(true)}
-                onMouseLeave={() => setIsProductsOpen(false)}
-              >
-                Продукти
-              </button>
-            </Link>
-            
-            <div
-              className={`nav-dropdown fixed left-0 right-0  bg-[#E6E7E5] top-[106px] shadow-lg z-[90] transition-all duration-300 ${
-                isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-              }`}
-              onMouseEnter={() => setIsProductsOpen(true)}
-              onMouseLeave={() => setIsProductsOpen(false)}
-            >
-              <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
-                <div className="flex gap-16">
-                  {/* First Column */}
-                  <div className="flex flex-col">
-                  <div className="flex flex-col nav-sub-item relative"> 
-                    <Link
-                      href="/products"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514] font-bold  nav-sub-item"
+          {mainNavItems.map((item, index) => (
+            <div key={index} className="relative">
+              {item.hasDropdown ? (
+                <>
+                  <Link href={item.href}>
+                    <button
+                      className="px-6 py-4 text-[#1F1514] transition-colors cursor-pointer"
+                      onMouseEnter={() => handleDropdownMouseEnter(item.label)}
+                      onMouseLeave={handleDropdownMouseLeave}
                     >
-                      Opfolio
-                    </Link>
-                    </div>
-                    <div className="flex flex-col nav-sub-item relative"> 
-                    <Link
-                      href="/products/funds"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514]"
-                    >
-                      Инвестициски фондови
-                    </Link>
-                    </div>
-                    <div className="flex flex-col nav-sub-item relative"> 
-                    <Link
-                      href="/products/mse"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514]"
-                    >
-                      Македонска берза
-                    </Link>
-                  </div>
-                  </div>
-                  {/* Divider */}
-                  <div className="w-[1px] h-[169px] bg-gradient-to-b from-[#E6E7E5] via-[#5A7D7C] to-[#E6E7E5]"></div>
-
-                  {/* Second Column */}
-                  <div className="flex flex-col"> 
-                  <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/products/documents"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514] font-bold"
-                    >
-                      Документи
-                    </Link>
-                    </div>
-                    <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/products/trading"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514]"
-                    >
-                      Тргување со акции
-                    </Link>
-                    </div>
-                    <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/products/bonds"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514]"
-                    >
-                      Обврзници
-                    </Link>
+                      {item.label}
+                    </button>
+                  </Link>
+                  
+                  <div
+                    className={`nav-dropdown fixed left-0 right-0 bg-[#E6E7E5] top-[106px] shadow-lg z-[90] transition-all duration-300 ${
+                      openDropdown === item.label ? 'opacity-100 visible' : 'opacity-0 invisible'
+                    }`}
+                    onMouseEnter={() => handleDropdownMouseEnter(item.label)}
+                    onMouseLeave={handleDropdownMouseLeave}
+                  >
+                    <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
+                      <div className="flex gap-16">
+                        {item.dropdownColumns?.map((column, columnIndex) => (
+                          <div key={columnIndex} className="flex">
+                            <div className="flex flex-col">
+                              {column.map((subItem, subIndex) => (
+                                <div key={subIndex} className="flex flex-col nav-sub-item relative">
+                                  <Link
+                                    href={subItem.href}
+                                    className={`px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514] ${
+                                      subItem.isBold ? 'font-bold' : ''
+                                    } nav-sub-item`}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                            {columnIndex < (item.dropdownColumns?.length || 0) - 1 && (
+                              <div className="w-[1px] h-full bg-gradient-to-b from-[#E6E7E5] via-[#5A7D7C] to-[#E6E7E5] ml-8"></div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  {/* Divider */}
-                  <div className="w-[1px] h-[169px] bg-gradient-to-b from-[#E6E7E5] via-[#5A7D7C] to-[#E6E7E5]"></div>
-
-                  {/* Third Column */}
-                  <div className="flex flex-col">
-                  <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/education"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514] font-bold"
-                    >
-                      Едукација
-                    </Link>
-                    </div>
-                    <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/products/stock-index"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514]"
-                    >
-                      Берзански индекс
-                    </Link>
-                    </div>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="w-[1px] h-[169px] bg-gradient-to-b from-[#E6E7E5] via-[#5A7D7C] to-[#E6E7E5]"></div>
-
-                  {/* Fourth Column */}
-                  <div className="flex flex-col">
-                  <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/blog"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514] font-bold"
-                    >
-                      Блог
-                    </Link>
-                    </div>
-                    <div className="flex flex-col nav-sub-item relative">
-                    <Link
-                      href="/products/inflation"
-                      className="px-6 py-4 pl-0 pb-1 rounded-lg transition-colors text-[#1F1514]"
-                    >
-                      Инфлација
-                    </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="px-6 py-4 text-[#1F1514] transition-colors nav-item"
+                >
+                  {item.label}
+                </Link>
+              )}
             </div>
-          </div>
-
-          {/* <div className="relative">
-            <Link href={"/education"}>
-              <button
-                className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors cursor-pointer"
-                onMouseEnter={() => setIsEducationOpen(true)}
-                onMouseLeave={() => setIsEducationOpen(false)}
-              >
-                Едукација
-              </button>
-            </Link>
-            {isEducationOpen && (
-              <div
-                className="fixed left-0 right-0 w-full bg-white shadow-lg z-50 pt-2"
-                onMouseEnter={() => setIsEducationOpen(true)}
-                onMouseLeave={() => setIsEducationOpen(false)}
-              >
-                <div className="max-w-[1444px] mx-auto px-4 md:px-8 lg:px-[120px] py-10">
-                  <div className="flex gap-16">
-                    <div className="flex flex-col gap-2">
-                      <Link
-                        href="/education/money-fund"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Паричен фонд
-                      </Link>
-                      <Link
-                        href="/education/progressive-fund"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Прогресивен фонд (акциски фонд)
-                      </Link>
-                      <Link
-                        href="/education/investment-funds"
-                        className="px-6 py-4 hover:bg-[#F5C322] rounded"
-                      >
-                        Инвестициски фондови
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div> */}
-
-          {/* <Link
-            href="/blog"
-            className="px-6 py-4 text-[#1F1514] hover:text-[#F5C322] transition-colors"
-          >
-            Блог
-          </Link> */}
-
-          <Link
-            href="/calculator"
-            className="px-6 py-4 text-[#1F1514] transition-colors nav-item"
-          >
-            Калкулатор
-          </Link>
-
-          <Link
-            href="/about"
-            className="px-6 py-4 text-[#1F1514] transition-colors nav-item"
-          >
-            За Компанијата
-          </Link>
+          ))}
         </div>
 
         {/* Desktop Auth Buttons */}
         <div className="hidden lg:flex items-center gap-4">
-          <Link
-            href="/login"
-            className="cta-button px-4 py-4 border border-[#1F1514] rounded-xl text-[#1F1514] bg-transparent text-sm"
-          >
-            Најави се
-          </Link>
-          <Link
-            href="/register"
-            className="cta-button px-4 py-4 bg-[#F5C322] rounded-xl text-[#1F1514] text-sm"
-          >
-            Регистрирај се
-          </Link>
+          {authButtons.map((button, index) => (
+            <Link
+              key={index}
+              href={button.href}
+              className={`cta-button px-4 py-4 rounded-xl text-sm ${
+                button.variant === 'outline'
+                  ? 'border border-[#1F1514] text-[#1F1514] bg-transparent'
+                  : 'bg-[#F5C322] text-[#1F1514]'
+              }`}
+            >
+              {button.label}
+            </Link>
+          ))}
         </div>
       </div>
 
@@ -276,109 +224,67 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-[#E6E7E5] p-4 shadow-lg">
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2">
-              <button
-                className="px-4 py-2 text-[#1F1514] font-medium flex items-center justify-between"
-                onClick={() => setIsProductsOpen(!isProductsOpen)}
-              >
-                <span>Продукти</span>
-                <span>{isProductsOpen ? "▼" : "▶"}</span>
-              </button>
-              {isProductsOpen && (
-                <div className="pl-4 flex flex-col gap-2">
+            {mainNavItems.map((item, index) => (
+              <div key={index} className="flex flex-col gap-2">
+                {item.hasDropdown ? (
+                  <>
+                    <button
+                      className="px-4 py-2 text-[#1F1514] font-medium flex items-center justify-between"
+                      onClick={() => handleDropdownToggle(item.label)}
+                    >
+                      <span>{item.label}</span>
+                      <span>{openDropdown === item.label ? "▼" : "▶"}</span>
+                    </button>
+                    {openDropdown === item.label && (
+                      <div className="pl-4 flex flex-col gap-2">
+                        {item.dropdownColumns?.map((column, columnIndex) => (
+                          <div key={columnIndex}>
+                            {column.map((subItem, subIndex) => (
+                              <div key={subIndex}>
+                                <Link
+                                  href={subItem.href}
+                                  className={`px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] ${
+                                    subItem.isBold ? 'font-bold' : ''
+                                  } nav-sub-item`}
+                                >
+                                  {subItem.label}
+                                </Link>
+                              </div>
+                            ))}
+                            {/* Add divider after each column except the last one */}
+                            {columnIndex < (item.dropdownColumns?.length || 0) - 1 && (
+                              <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
                   <Link
-                    href="/products"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold nav-sub-item"
+                    href={item.href}
+                    className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
                   >
-                    Opfolio
+                    {item.label}
                   </Link>
-                  <Link
-                    href="/products/funds"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
-                  >
-                    Инвестициски фондови
-                  </Link>
-                  <Link
-                    href="/products/mse"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
-                  >
-                    Македонска берза
-                  </Link>
-                  <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
-                  <Link
-                    href="/products/documents"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
-                  >
-                    Документи
-                  </Link>
-                  <Link
-                    href="/products/trading"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
-                  >
-                    Тргување со акции
-                  </Link>
-                  <Link
-                    href="/products/bonds"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
-                  >
-                    Обврзници
-                  </Link>
-                  <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
-                  <Link
-                    href="/education"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
-                  >
-                    Едукација
-                  </Link>
-                  <Link
-                    href="/products/stock-index"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
-                  >
-                    Берзански индекс
-                  </Link>
-                  <div className="h-[1px] w-full bg-[#5A7D7C] my-2"></div>
-                  <Link
-                    href="/blog"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514] font-bold"
-                  >
-                    Блог
-                  </Link>
-                  <Link
-                    href="/products/inflation"
-                    className="px-4 py-2 hover:bg-[#F5C322] rounded text-[#1F1514]"
-                  >
-                    Инфлација
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/calculator"
-              className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
-            >
-              Калкулатор
-            </Link>
-            <Link
-              href="/about"
-              className="px-4 py-2 text-[#1F1514] hover:bg-[#F5C322] rounded"
-            >
-              За Компанијата
-            </Link>
+                )}
+              </div>
+            ))}
 
             <div className="flex flex-col gap-2 mt-4">
-              <Link
-                href="/login"
-                className="px-4 py-2 border border-[#1F1514] rounded-xl text-center text-[#1F1514] hover:bg-[#1F1514] hover:text-white transition-colors"
-              >
-                Најави се
-              </Link>
-              <Link
-                href="/register"
-                className="px-4 py-2 bg-[#F5C322] rounded-xl text-center text-[#1F1514] hover:bg-[#1F1514] hover:text-white transition-colors"
-              >
-                Започни
-              </Link>
+              {authButtons.map((button, index) => (
+                <Link
+                  key={index}
+                  href={button.href}
+                  className={`px-4 py-2 rounded-xl text-center transition-colors ${
+                    button.variant === 'outline'
+                      ? 'border border-[#1F1514] text-[#1F1514] hover:bg-[#1F1514] hover:text-white'
+                      : 'bg-[#F5C322] text-[#1F1514] hover:bg-[#1F1514] hover:text-white'
+                  }`}
+                >
+                  {button.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
