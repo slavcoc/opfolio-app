@@ -1,16 +1,7 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "./local-fonts.css";
-
-@config {
-  theme: {
-    fontFamily: {
-      inter: ["var(--font-inter)"],
-      lora: ["var(--font-lora)"],
-      raleway: ["var(--font-raleway)"],
-      kazimir: ["'Kazimir-Bold'", "sans-serif"],
-    }
-  }
-}
 
 :root {
   --background: #F3F0E6;
@@ -25,15 +16,6 @@ html, body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
-}
-
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-family-inter: var(--font-inter);
-  --font-family-lora: var(--font-lora);
-  --font-family-raleway: var(--font-raleway);
-  --font-family-kazimir: 'Kazimir-Bold', sans-serif;
 }
 
 body {
