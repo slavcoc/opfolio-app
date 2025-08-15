@@ -8,23 +8,14 @@ const Invest = () => {
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16">
           {/* Content - Left side */}
           <div className="flex-1 text-center lg:text-left order-1 w-full max-w-[600px] lg:max-w-none mx-auto">
-            <h2
-              className="font-lora text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#1F1514] mb-4 sm:mb-5 md:mb-6"
-              style={{ lineHeight: "1.28em" }}
-            >
+            <h2 className="text-heading-3 text-[#1F1514] mb-4 sm:mb-5 md:mb-6">
               Опфолио Invest
             </h2>
             <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
-              <p
-                className="text-sm sm:text-base md:text-lg lg:text-xl text-[#1F1514] font-light"
-                style={{ lineHeight: "1.4em" }}
-              >
+              <p className="text-body-small text-[#1F1514]">
                 За оптимална распределба на селектираните акции, го користиме софтверот Опфолио Инвест, кој го развиваме и тестираме веќе 10 години.
               </p>
-              <p
-                className="text-sm sm:text-base md:text-lg lg:text-xl text-[#1F1514] font-light"
-                style={{ lineHeight: "1.4em" }}
-              >
+              <p className="text-body-small text-[#1F1514]">
                 Софтверското решение има научна и историска позадина, и ни помага да ја зачуваме вредноста на средствата, особено во време на кризи и големи флуктуации на пазарот на капитал.
               </p>
             </div>

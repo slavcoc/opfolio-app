@@ -44,16 +44,16 @@ const Consultation = () => {
                     height={30}
                     className="absolute top-0 left-0 -ml-4 "
                   />
-                  <p className="font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[22px] text-[#1F1514] font-light leading-[1.28] relative z-10 pl-3 sm:pl-6 lg:pl-4 xl:pl-6">
+                  <p className="text-quote text-[#1F1514] relative z-10 pl-3 sm:pl-6 lg:pl-4 xl:pl-6">
                     Редовното инвестирање во компании со докажана способност за
                     создавање вредност е најсигурниот пат до долгорочен
                     финансиски успех.
                   </p>
                 </div>
-                <h2 className="font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-medium leading-[1.28] pt-5">
+                <h2 className="text-quote-large text-[#1F1514] pt-5">
                   - Васко Богдановски
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[24px] text-[#1F1514] font-medium pl-5">
+                <p className="text-quote-large text-[#1F1514] pl-5">
                   Главен извршен директор на Опфолио Инвестиции АД Скопје
                 </p>
               </div>
@@ -64,14 +64,14 @@ const Consultation = () => {
       {/* Consultation */}
       <div className="relative z-10 max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px] pt-60">
         <div className="flex flex-col items-center gap-8 md:gap-10 lg:gap-12">
-          <h2 className="font-lora text-[32px] sm:text-[40px] md:text-[48px] text-[#1F1514] text-center leading-[1.28] max-w-[900px]">
+          <h2 className="text-heading-2 text-[#1F1514] text-center max-w-[900px]">
             Не можете да се одлучите или не знаете од каде да почнете?{" "}
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
             <Link
               href="/consultation"
-              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#F5C322] text-[#1F1514] rounded-lg sm:rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg font-inter font-bold text-base sm:text-lg md:text-xl lg:text-[20px] border border-white text-center"
+              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#F5C322] text-[#1F1514] rounded-lg sm:rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-button border border-white text-center"
             >
               Закажете консултација
             </Link>

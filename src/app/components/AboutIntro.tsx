@@ -13,19 +13,19 @@ const AboutIntro = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-[95px] items-center">
           {/* Content */}
           <div className="space-y-6 sm:space-y-8 md:space-y-10 max-w-full lg:max-w-[614px]">
-            <h2 className="font-lora text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-semibold text-[#1F1514] leading-[1.28] tracking-[0.01em]">
+            <h2 className="text-heading-2 text-[#1F1514]">
               Вредностите кои ги изградивме за вашиот бенeфит
             </h2>
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
-              <p className="font-inter text-base sm:text-lg md:text-xl lg:text-[20px] font-light text-[#1F1514] leading-[1.4]">
+              <p className="text-body-medium text-[#1F1514]">
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до
                 еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
               </p>
-              <p className="font-inter text-base sm:text-lg md:text-xl lg:text-[20px] font-light text-[#1F1514] leading-[1.4]">
+              <p className="text-body-medium text-[#1F1514]">
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до
                 еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
               </p>
-              <p className="font-inter text-base sm:text-lg md:text-xl lg:text-[20px] font-light text-[#1F1514] leading-[1.4]">
+              <p className="text-body-medium text-[#1F1514]">
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до
                 еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
               </p>

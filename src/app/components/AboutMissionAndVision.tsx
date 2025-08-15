@@ -15,21 +15,21 @@ const AboutMissionAndVision: React.FC = () => {
             />
           </div> */}
           <div className="flex flex-col gap-10 max-w-[614px] lg:max-w-[722px]">
-            <h2 className="font-lora font-semibold text-3xl sm:text-4xl lg:text-[48px] leading-[1.28] tracking-[0.01em] text-[#1F1514]">
+            <h2 className="text-heading-2 text-[#1F1514]">
               Нашата визија и мисија за вашата финансиска иднина
             </h2>
             <div className="flex flex-col gap-6 text-[#1F1514]">
-              <p className="font-inter font-light text-base sm:text-lg lg:text-[20px] leading-[1.4]">
+              <p className="text-body-medium">
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
 
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
               </p>
-              <p className="font-inter font-light text-base sm:text-lg lg:text-[20px] leading-[1.4]">
+              <p className="text-body-medium">
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
 
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
               </p>
-              <p className="font-inter font-light text-base sm:text-lg lg:text-[20px] leading-[1.4]">
+              <p className="text-body-medium">
                 Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
               </p>
             </div>

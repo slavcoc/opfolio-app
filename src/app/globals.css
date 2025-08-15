@@ -40,6 +40,60 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Kazimir-Bold', sans-serif;
 }
 
+/* Typography Utility Classes */
+.text-heading-1 {
+  @apply font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-64 font-medium leading-1.09 tracking-0.01;
+}
+
+.text-heading-2 {
+  @apply font-lora text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-1.28 tracking-0.01;
+}
+
+.text-heading-3 {
+  @apply font-lora text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-1.28;
+}
+
+.text-heading-4 {
+  @apply font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-1.28;
+}
+
+.text-body-large {
+  @apply font-inter text-base sm:text-lg md:text-xl lg:text-2xl xl:text-24 font-light leading-1.42;
+}
+
+.text-body-medium {
+  @apply font-inter text-base sm:text-lg md:text-xl lg:text-20 font-light leading-1.4;
+}
+
+.text-body-small {
+  @apply font-inter text-sm sm:text-base md:text-lg lg:text-xl font-light leading-1.4;
+}
+
+.text-body-xs {
+  @apply font-inter text-xs sm:text-sm font-semibold leading-1.21;
+}
+
+.text-button {
+  @apply font-inter text-base sm:text-lg md:text-xl lg:text-20 font-bold leading-1.21;
+}
+
+.text-caption {
+  @apply font-raleway text-sm font-semibold leading-1.17;
+}
+
+.text-quote {
+  @apply font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-22 font-light leading-1.28;
+}
+
+.text-quote-large {
+  @apply font-lora text-xl sm:text-2xl md:text-24 font-medium leading-1.28;
+}
+
+.text-quote-sign {
+  @apply font-kazimir text-102 leading-1.366;
+}
+
+/* Element-specific styles */
 .element-hidden-effect {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;

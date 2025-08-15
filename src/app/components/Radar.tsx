@@ -40,23 +40,17 @@ const Radar = () => {
 
           {/* Content - Right side */}
           <div className="flex-1 text-center lg:text-left order-1 lg:order-2 w-full max-w-[600px] lg:max-w-none mx-auto">
-            <h2
-              className="font-lora text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#1F1514] mb-4 sm:mb-5 md:mb-6"
-              style={{ lineHeight: "1.28em" }}
-            >
+            <h2 className="text-heading-3 text-[#1F1514] mb-4 sm:mb-5 md:mb-6">
               Опфолио Радар
             </h2>
-            <p
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-[#1F1514] font-light mb-4 sm:mb-5 md:mb-6 max-w-2xl mx-auto lg:mx-0"
-              style={{ lineHeight: "1.4em" }}
-            >
+            <p className="text-body-small text-[#1F1514] mb-4 sm:mb-5 md:mb-6 max-w-2xl mx-auto lg:mx-0">
               Опфолио Радар е напреден модел создаден за проценка на инвестицискиот рејтинг на компаниите. Овој модел се базира на 125 внимателно одбрани коефициенти, кои се распоредени во шест главни категории:
             </p>
             <ul className="flex flex-col gap-1 sm:gap-2 list-none pl-0">
               {categories.map((category, index) => (
                 <li
                   key={index}
-                  className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-[#1F1514] flex items-center"
+                  className="text-body-small font-bold text-[#1F1514] flex items-center"
                   style={{ lineHeight: "1.7em" }}
                 >
                   <span className="inline-block w-2 h-2 rounded-full bg-[#1F1514] mr-3"></span>
