@@ -61,56 +61,91 @@ const AboutTimeline: React.FC = () => {
         </div>
 
         {/* Timeline Section */}
-        <div className="relative">
-          {/* Timeline Line - Hidden on mobile, visible on desktop */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full">
-            {/* Dashed line */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-[#5A7D7C]"></div>
-            
-            {/* Timeline dots */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
-            <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
-            <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
-          </div>
-
-          {/* Timeline Cards */}
-          <div className="space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32">
+        <div className="relative mt-0">
+          {/* Timeline Items */}
+          <div>
             {timelineData.map((item, index) => (
-              <div key={item.id} className={`relative flex flex-col lg:flex-row items-center ${index % 2 === 0 ? 'lg:justify-start' : 'lg:justify-end'}`}>
-                {/* Date - Mobile version */}
-                <div className="lg:hidden mb-6 sm:mb-8">
-                  <span className="text-2xl sm:text-3xl md:text-4xl font-lora font-bold leading-1.28 tracking-0.01 text-black">
-                    {item.date}
-                  </span>
-                </div>
+              <div key={item.id} className="relative">
+                {/* Mobile version */}
+                <div className="lg:hidden">
+                  {/* Date - Mobile version */}
+                  <div className="mb-6 sm:mb-8 text-center">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-lora font-bold leading-1.28 tracking-0.01 text-black">
+                      {item.date}
+                    </span>
+                  </div>
 
-                {/* Card */}
-                <div className={`w-full max-w-[638px] bg-white rounded-[20px] p-6 sm:p-8 md:p-12 lg:p-16 shadow-lg ${index % 2 === 0 ? 'lg:mr-auto lg:pr-16' : 'lg:ml-auto lg:pl-16'}`}>
-                  <div className="space-y-6 sm:space-y-8">
-                    {/* Colored header */}
-                    <div 
-                      className="w-full h-48 sm:h-64 md:h-80 lg:h-[304px] rounded-[20px]"
-                      style={{ backgroundColor: item.color }}
-                    ></div>
-                    
-                    {/* Content */}
-                    <div className="space-y-2 sm:space-y-3">
-                      <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[412px]">
-                        {item.title}
-                      </h3>
-                      <p className="text-body-medium text-[#1F1514]">
-                        {item.description}
-                      </p>
+                  {/* Card - Mobile version */}
+                  <div className="w-full bg-white rounded-[20px] p-6 sm:p-8 md:p-12 lg:p-16 shadow-lg">
+                    <div className="space-y-6 sm:space-y-8">
+                      {/* Colored header */}
+                      <div 
+                        className="w-full h-48 sm:h-64 md:h-80 lg:h-[304px] rounded-[20px]"
+                        style={{ backgroundColor: item.color }}
+                      ></div>
+                      
+                      {/* Content */}
+                      <div className="space-y-2 sm:space-y-3">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[412px]">
+                          {item.title}
+                        </h3>
+                        <p className="text-body-medium text-[#1F1514]">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Date - Desktop version */}
-                <div className={`hidden lg:block absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} transform ${index % 2 === 0 ? 'translate-x-16' : '-translate-x-16'}`}>
-                  <span className="text-[36px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
-                    {item.date}
-                  </span>
+                {/* Desktop Timeline Item */}
+                <div className="hidden lg:block relative min-h-[500px] mb-32">
+                  {/* Centered line with yellow dots - height matches card + 20px padding */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[calc(100%+20px)] top-[-10px]">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-[#5A7D7C]"></div>
+                    
+                    {/* Yellow dots at start and end of line */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
+                  </div>
+
+                  {/* Relative positioned container */}
+                  <div className="relative w-full h-full">
+                    {/* Card positioned based on index (alternating) */}
+                    <div className={`absolute top-1/2 -translate-y-1/2 w-[638px] bg-white rounded-[20px] p-16 shadow-lg ${
+                      index % 2 === 0 
+                        ? 'right-1/2 transform -translate-x-5' // Left side (first, third)
+                        : 'left-1/2 transform translate-x-5'  // Right side (second, fourth)
+                    }`}>
+                      <div className="space-y-8">
+                        {/* Colored header */}
+                        <div 
+                          className="w-full h-[304px] rounded-[20px]"
+                          style={{ backgroundColor: item.color }}
+                        ></div>
+                        
+                        {/* Content */}
+                        <div className="space-y-3">
+                          <h3 className="text-[36px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[412px]">
+                            {item.title}
+                          </h3>
+                          <p className="text-body-medium text-[#1F1514]">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Year positioned opposite to card */}
+                    <div className={`absolute top-1/2 -translate-y-1/2 ${
+                      index % 2 === 0 
+                        ? 'left-1/2 transform translate-x-5'  // Right side (first, third)
+                        : 'right-1/2 transform -translate-x-5' // Left side (second, fourth)
+                    }`}>
+                      <span className="text-[36px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
+                        {item.date}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
