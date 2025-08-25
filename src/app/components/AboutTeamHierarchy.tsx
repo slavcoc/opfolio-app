@@ -11,40 +11,40 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Васко Богатиновски",
+    name: "Васко Богдановски",
     position: "CEO and Founder of Opfolio",
     image: "/images/vasko.jpg",
     linkedin: "https://linkedin.com/in/vasko-bogatinovski",
   },
   {
-    name: "Васко",
-    position: "CEO and Founder of Opfolio",
-    image: "/images/vasko.jpg",
-    linkedin: "https://linkedin.com/in/vasko",
+    name: "Васко Богдановски",
+    position: "Главен извршен директор",
+    image: "/images/Vasko.jpg",
+    linkedin: "https://www.linkedin.com/in/vaskobog/",
   },
   {
-    name: "Огнен",
-    position: "CEO and Founder of Opfolio",
-    image: "/images/ognen.jpg",
-    linkedin: "https://linkedin.com/in/ognen",
+    name: "Огнен Тилиќ",
+    position: "Извршен директор",
+    image: "/images/Ognen.jpg",
+    linkedin: "https://www.linkedin.com/in/ognen-tilic-a173bb6/",
   },
   {
-    name: "Игор",
-    position: "CEO and Founder of Opfolio",
-    image: "/images/igor.jpg",
-    linkedin: "https://linkedin.com/in/igor",
+    name: "Игор Мишевски",
+    position: "Претседател на одборот на директори",
+    image: "/images/Igor.jpg",
+    linkedin: "https://www.linkedin.com/in/mishevski/",
   },
   {
-    name: "Лазар",
-    position: "CEO and Founder of Opfolio",
-    image: "/images/lazar.jpg",
-    linkedin: "https://linkedin.com/in/lazar",
+    name: "Сашко Самарџиоски",
+    position: "Неизвршен член на Одборот на директори",
+    image: "/images/Sasho.jpg",
+    linkedin: "https://www.linkedin.com/in/sasko-samardzioski-0388a7168/",
   },
   {
-    name: "Сашко",
-    position: "CEO and Founder of Opfolio",
-    image: "/images/sashko.jpg",
-    linkedin: "https://linkedin.com/in/sashko",
+    name: "Лазар Неданоски",
+    position: "Независен неизвршен член на Одборот на директори",
+    image: "/images/Lazar.jpg",
+    linkedin: "https://www.linkedin.com/in/lazarnedanoski/",
   },
 ];
 
@@ -94,6 +94,10 @@ interface TeamMemberCardProps {
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
   return (
     <div className="relative h-[439px]">
+      {/* Green border box - positioned to not cover the image */}
+      <div className="absolute left-0 top-[140px] w-full h-[299px] border-[1px] border-[#5A7D7C] rounded-[12px]" />
+
+      {/* Image section - positioned above the green border */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2">
         <div className="relative w-[260px] h-[260px]">
           {/* Background circle */}
@@ -117,15 +121,12 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
         </div>
       </div>
 
-      {/* Bottom decorative border */}
-      <div className="absolute left-0 top-[129px] w-full h-[312px] border-[1px] border-[#5A7D7C] rounded-[12px]" />
-
-      {/* Member info */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[298px] text-center">
+      {/* Member info - positioned inside the green border */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-[280px] text-center px-4">
         <h3 className="font-inter font-semibold text-[32px] leading-none text-black mb-[16px]">
           {member.name}
         </h3>
-        <p className="font-inter text-[20px] leading-[1.6] text-black mb-[10px] max-w-[265px]">
+        <p className="font-inter text-[20px] leading-[1.6] text-black mb-[10px] max-w-[265px] mx-auto">
           {member.position}
         </p>
         {member.linkedin && (
