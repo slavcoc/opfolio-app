@@ -67,7 +67,7 @@ const AboutTimeline: React.FC = () => {
             {timelineData.map((item, index) => (
               <div key={item.id} className="relative">
                 {/* Mobile version */}
-                <div className="lg:hidden">
+                <div className="lg:hidden mb-16">
                   {/* Date - Mobile version */}
                   <div className="mb-6 sm:mb-8 text-center">
                     <span className="text-2xl sm:text-3xl md:text-4xl font-lora font-bold leading-1.28 tracking-0.01 text-black">
@@ -98,9 +98,9 @@ const AboutTimeline: React.FC = () => {
                 </div>
 
                 {/* Desktop Timeline Item */}
-                <div className="hidden lg:block relative min-h-[500px] mb-32">
-                  {/* Centered line with yellow dots - height matches card + 20px padding */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[calc(100%+20px)] top-[-10px]">
+                <div className="hidden lg:block relative min-h-[600px] mb-32">
+                  {/* Centered line with yellow dots - height matches card + padding */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[550px] top-[-25px]">
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-[#5A7D7C]"></div>
                     
                     {/* Yellow dots at start and end of line */}
@@ -110,8 +110,8 @@ const AboutTimeline: React.FC = () => {
 
                   {/* Relative positioned container */}
                   <div className="relative w-full h-full">
-                    {/* Card positioned based on index (alternating) */}
-                    <div className={`absolute top-1/2 -translate-y-1/2 w-[638px] bg-white rounded-[20px] p-16 shadow-lg ${
+                    {/* Card positioned based on index (alternating) - aligned with top yellow dot */}
+                    <div className={`absolute top-0 w-[638px] bg-white rounded-[20px] p-16 shadow-lg ${
                       index % 2 === 0 
                         ? 'right-1/2 transform -translate-x-5' // Left side (first, third)
                         : 'left-1/2 transform translate-x-5'  // Right side (second, fourth)
@@ -135,8 +135,8 @@ const AboutTimeline: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Year positioned opposite to card */}
-                    <div className={`absolute top-1/2 -translate-y-1/2 ${
+                    {/* Year positioned opposite to card - aligned with top yellow dot */}
+                    <div className={`absolute top-0 ${
                       index % 2 === 0 
                         ? 'left-1/2 transform translate-x-5'  // Right side (first, third)
                         : 'right-1/2 transform -translate-x-5' // Left side (second, fourth)
