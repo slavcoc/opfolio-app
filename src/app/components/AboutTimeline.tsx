@@ -101,14 +101,22 @@ const AboutTimeline: React.FC = () => {
                 <div className="hidden lg:block relative min-h-[650px] mb-0">
                   {/* Centered line with yellow dots - height matches card + padding */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[650px]">
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-[#5A7D7C]"></div>
+                    {/* SVG Timeline Line */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full flex flex-col items-center justify-center">
+                      <img 
+                        src="/images/timeline/timeline-line.svg" 
+                        alt="Timeline line" 
+                        className="w-full h-full object-cover"
+                        style={{ height: '90%' }}
+                      />
+                    </div>
                     
                     {/* Yellow dot at start of line */}
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full shadow-lg"></div>
                     
                     {/* Yellow dot at end of line - only for last item */}
                     {index === timelineData.length - 1 && (
-                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full shadow-lg"></div>
                     )}
                   </div>
 
@@ -117,8 +125,8 @@ const AboutTimeline: React.FC = () => {
                     {/* Card positioned based on index (alternating) - aligned with top yellow dot */}
                     <div className={`absolute top-[10px] w-[517px] bg-white rounded-[20px] p-9 shadow-lg ${
                       index % 2 === 0 
-                        ? 'right-1/2 transform -translate-x-5' // Left side (first, third)
-                        : 'left-1/2 transform translate-x-5'  // Right side (second, fourth)
+                        ? 'right-1/2 transform -translate-x-20' // Left side (first, third)
+                        : 'left-1/2 transform translate-x-20'  // Right side (second, fourth)
                     }`}>
                       <div className="space-y-6">
                         {/* Colored header */}
@@ -140,10 +148,10 @@ const AboutTimeline: React.FC = () => {
                     </div>
 
                     {/* Year positioned opposite to card - aligned with top yellow dot */}
-                    <div className={`absolute top-[10px] ${
+                    <div className={`absolute top-[-20px] ${
                       index % 2 === 0 
-                        ? 'left-1/2 transform translate-x-5'  // Right side (first, third)
-                        : 'right-1/2 transform -translate-x-5' // Left side (second, fourth)
+                        ? 'left-1/2 transform translate-x-20'  // Right side (first, third)
+                        : 'right-1/2 transform -translate-x-10' // Left side (second, fourth)
                     }`}>
                       <span className="text-[29px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
                         {item.date}

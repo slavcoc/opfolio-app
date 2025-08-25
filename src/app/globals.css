@@ -219,3 +219,10 @@ h1, h2, h3, h4, h5, h6 {
 .logo:hover path {
   fill: #F5C324;
 }
+
+/* Timeline dashed line */
+.timeline-dashed-line {
+  border-style: dashed !important;
+  border-width: 0 0 0 1px !important;
+  border-dasharray: 120 120 !important;
+}
