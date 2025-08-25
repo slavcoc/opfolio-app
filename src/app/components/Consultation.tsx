@@ -73,7 +73,7 @@ const Consultation = () => {
               href="/consultation"
               className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#F5C322] text-[#1F1514] rounded-lg sm:rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-button border border-white text-center"
             >
-              Закажете консултација
+              Kонтактирај не
             </Link>
           </div>
         </div>

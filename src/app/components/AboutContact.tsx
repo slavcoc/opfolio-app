@@ -67,7 +67,7 @@ const AboutContact: React.FC = () => {
                       />
                     </div>
                     <p className="font-inter text-xl lg:text-[20px] leading-[1.21] text-[#141F15]">
-                      Дане Крапчев 26/1
+                      Дане Крапчев 21/6
                     </p>
                   </div>
                   <div className="flex items-center gap-2">

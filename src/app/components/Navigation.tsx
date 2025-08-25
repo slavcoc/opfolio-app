@@ -13,14 +13,14 @@ const Navigation = () => {
   const mainNavItems = [
     {
       label: "За нас",
-      href: "/about-us",
+      href: "/za-kompanijata",
       hasDropdown: true,
       dropdownColumns: [
         [
-          { label: "Продукти", href: "/products", isBold: false },
+          { label: "Продукти", href: "/produkti", isBold: false },
           { label: "Едукација", href: "/education", isBold: false },
           { label: "Блог", href: "/blog", isBold: false },
-          { label: "Документи", href: "/products/documents", isBold: false },
+          { label: "Документи", href: "/za-kompanijata/dokumenti", isBold: false },
         ],
       ],
     },
@@ -100,7 +100,7 @@ const Navigation = () => {
         <div className="flex items-center">
           <Link href="/" className="logo">
             <Image
-              src="./logo.svg"
+              src="./opfolio-logo.png"
               alt="Opfolio Logo"
               width={120}
               height={40}

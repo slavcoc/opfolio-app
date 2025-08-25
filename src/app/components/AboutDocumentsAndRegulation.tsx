@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const AboutDocumentsAndRegulation: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-[#FFF4CF] py-12 sm:py-16 md:py-20">
@@ -31,19 +32,21 @@ const AboutDocumentsAndRegulation: React.FC = () => {
           Документи и законски регулативи
         </h2>
 
-        <p className="text-body-medium text-center text-[#1F1514] max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] mx-auto mb-6 sm:mb-8 md:mb-10 px-4">
+        {/* <p className="text-body-medium text-center text-[#1F1514] max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] mx-auto mb-6 sm:mb-8 md:mb-10 px-4">
           Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до
           еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
           <br />
           <br />
           Лорем ипсум долор сит амет, цонсекттеур адиписцинг елит, сед до
           еиусмод темпор инцидидунт ут лаборе ет долор магна алиљуа.
-        </p>
+        </p> */}
 
         <div className="flex justify-center">
+          <Link href="/za-kompanijata/dokumenti">
           <button className="bg-[#F5C322] border border-white rounded-xl px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-button text-[#1F1514] cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-            Прочитајте повеќе
+            Сите документи
           </button>
+          </Link>
         </div>
       </div>
     </section>

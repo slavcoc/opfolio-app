@@ -36,13 +36,13 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Сашко Самарџиоски",
-    position: "Неизвршен член на Одборот на директори",
+    position: "Член на Одборот на директори",
     image: "/images/Sasho.jpg",
     linkedin: "https://www.linkedin.com/in/sasko-samardzioski-0388a7168/",
   },
   {
     name: "Лазар Неданоски",
-    position: "Независен неизвршен член на Одборот на директори",
+    position: "Член на Одборот на директори",
     image: "/images/Lazar.jpg",
     linkedin: "https://www.linkedin.com/in/lazarnedanoski/",
   },
@@ -123,10 +123,10 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
 
       {/* Member info - positioned inside the green border */}
       <div className="absolute left-1/2 -translate-x-1/2 top-[280px] text-center px-4">
-        <h3 className="font-inter font-semibold text-[32px] leading-none text-black mb-[16px]">
+        <h3 className="font-inter font-semibold text-[28px] leading-none text-black mb-[16px]">
           {member.name}
         </h3>
-        <p className="font-inter text-[20px] leading-[1.6] text-black mb-[10px] max-w-[265px] mx-auto">
+        <p className="font-inter text-[16px] leading-[1.4] text-black mb-[10px] max-w-[380px] mx-auto">
           {member.position}
         </p>
         {member.linkedin && (

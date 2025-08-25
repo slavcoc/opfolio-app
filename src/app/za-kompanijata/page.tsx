@@ -2,7 +2,6 @@ import React from "react";
 import AboutIntro from "@/app/components/AboutIntro";
 import AboutMissionAndVision from "@/app/components/AboutMissionAndVision";
 import AboutTimeline from "@/app/components/AboutTimeline";
-import AboutOpfolio from "@/app/components/AboutOpfolio";
 import AboutCeo from "@/app/components/AboutCeo";
 import AboutTeamHierarchy from "@/app/components/AboutTeamHierarchy";
 import AboutDocumentsAndRegulation from "@/app/components/AboutDocumentsAndRegulation";
@@ -19,15 +18,15 @@ export default function AboutPage() {
       <div className="w-full">
         <AboutIntro />
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <AboutMissionAndVision />
-      </div>
+      </div> */}
       <div className="w-full">
         <AboutTimeline />
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <AboutOpfolio />
-      </div>
+      </div> */}
       <div className="w-full">
         <AboutCeo />
       </div>

@@ -53,8 +53,8 @@ const Radar = () => {
                   className="text-body-small font-bold text-[#1F1514] flex items-center"
                   style={{ lineHeight: "1.7em" }}
                 >
-                  <span className="inline-block w-2 h-2 rounded-full bg-[#1F1514] mr-3"></span>
-                  <span>{category}</span>
+                  <span className="inline-block w-2 h-2 rounded-full bg-[#1F1514] mr-3 "></span>
+                  <span className="text-body-small" style={{fontWeight: "600"}}>{category}</span>
                 </li>
               ))}
             </ul>

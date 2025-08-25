@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="flex flex-col gap-10 w-full lg:w-[219px]">
             <h3 className="text-[20px] font-bold text-[#1F1514]">Контакт</h3>
             <div className="flex flex-col gap-4">
-              <p className="text-[20px] text-[#1F1514]">Дане Крапчев 26/1</p>
+              <p className="text-[20px] text-[#1F1514]">Дане Крапчев 21/6</p>
               <p className="text-[20px] text-[#1F1514]">Центар-Скопје</p>
               <a
                 href="mailto:info@opfolio.mk"
@@ -79,7 +79,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="w-full lg:w-auto">
             <Image
-              src="./logo.svg"
+              src="./opfolio-logo.png"
               alt="Opfolio Logo"
               width={120}
               height={40}
