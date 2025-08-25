@@ -76,17 +76,17 @@ const AboutTimeline: React.FC = () => {
                   </div>
 
                   {/* Card - Mobile version */}
-                  <div className="w-full bg-white rounded-[20px] p-5 sm:p-7 md:p-11 lg:p-14 shadow-lg">
-                    <div className="space-y-5 sm:space-y-7">
+                  <div className="w-full bg-white rounded-[20px] p-5 sm:p-6 md:p-10 lg:p-13 shadow-lg">
+                    <div className="space-y-5 sm:space-y-6">
                       {/* Colored header */}
                       <div 
-                        className="w-full h-43 sm:h-58 md:h-72 lg:h-[274px] rounded-[20px]"
+                        className="w-full h-39 sm:h-52 md:h-65 lg:h-[247px] rounded-[20px]"
                         style={{ backgroundColor: item.color }}
                       ></div>
                       
                       {/* Content */}
                       <div className="space-y-2 sm:space-y-3">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[371px]">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[29px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[334px]">
                           {item.title}
                         </h3>
                         <p className="text-body-medium text-[#1F1514]">
@@ -100,32 +100,36 @@ const AboutTimeline: React.FC = () => {
                 {/* Desktop Timeline Item */}
                 <div className="hidden lg:block relative min-h-[650px] mb-0">
                   {/* Centered line with yellow dots - height matches card + padding */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[650px] top-[-22px]">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[650px]">
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-[#5A7D7C]"></div>
                     
-                    {/* Yellow dots at start and end of line */}
+                    {/* Yellow dot at start of line */}
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
+                    
+                    {/* Yellow dot at end of line - only for last item */}
+                    {index === timelineData.length - 1 && (
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#F5C324] rounded-full border-4 border-white shadow-lg"></div>
+                    )}
                   </div>
 
                   {/* Relative positioned container */}
                   <div className="relative w-full h-full">
                     {/* Card positioned based on index (alternating) - aligned with top yellow dot */}
-                    <div className={`absolute top-[-20px] w-[574px] bg-white rounded-[20px] p-14 shadow-lg ${
+                    <div className={`absolute top-[10px] w-[517px] bg-white rounded-[20px] p-9 shadow-lg ${
                       index % 2 === 0 
                         ? 'right-1/2 transform -translate-x-5' // Left side (first, third)
                         : 'left-1/2 transform translate-x-5'  // Right side (second, fourth)
                     }`}>
-                      <div className="space-y-7">
+                      <div className="space-y-6">
                         {/* Colored header */}
                         <div 
-                          className="w-full h-[274px] rounded-[20px]"
+                          className="w-full h-[247px] rounded-[20px]"
                           style={{ backgroundColor: item.color }}
                         ></div>
                         
                         {/* Content */}
                         <div className="space-y-3">
-                          <h3 className="text-[32px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[371px]">
+                          <h3 className="text-[29px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[334px]">
                             {item.title}
                           </h3>
                           <p className="text-body-medium text-[#1F1514]">
@@ -136,12 +140,12 @@ const AboutTimeline: React.FC = () => {
                     </div>
 
                     {/* Year positioned opposite to card - aligned with top yellow dot */}
-                    <div className={`absolute top-[-20px] ${
+                    <div className={`absolute top-[10px] ${
                       index % 2 === 0 
                         ? 'left-1/2 transform translate-x-5'  // Right side (first, third)
                         : 'right-1/2 transform -translate-x-5' // Left side (second, fourth)
                     }`}>
-                      <span className="text-[32px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
+                      <span className="text-[29px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
                         {item.date}
                       </span>
                     </div>
