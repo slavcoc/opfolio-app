@@ -67,26 +67,26 @@ const AboutTimeline: React.FC = () => {
             {timelineData.map((item, index) => (
               <div key={item.id} className="relative">
                 {/* Mobile version */}
-                <div className="lg:hidden mb-16">
+                <div className="lg:hidden mb-14">
                   {/* Date - Mobile version */}
-                  <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-5 sm:mb-7 text-center">
                     <span className="text-2xl sm:text-3xl md:text-4xl font-lora font-bold leading-1.28 tracking-0.01 text-black">
                       {item.date}
                     </span>
                   </div>
 
                   {/* Card - Mobile version */}
-                  <div className="w-full bg-white rounded-[20px] p-6 sm:p-8 md:p-12 lg:p-16 shadow-lg">
-                    <div className="space-y-6 sm:space-y-8">
+                  <div className="w-full bg-white rounded-[20px] p-5 sm:p-7 md:p-11 lg:p-14 shadow-lg">
+                    <div className="space-y-5 sm:space-y-7">
                       {/* Colored header */}
                       <div 
-                        className="w-full h-48 sm:h-64 md:h-80 lg:h-[304px] rounded-[20px]"
+                        className="w-full h-43 sm:h-58 md:h-72 lg:h-[274px] rounded-[20px]"
                         style={{ backgroundColor: item.color }}
                       ></div>
                       
                       {/* Content */}
                       <div className="space-y-2 sm:space-y-3">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[412px]">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[371px]">
                           {item.title}
                         </h3>
                         <p className="text-body-medium text-[#1F1514]">
@@ -98,9 +98,9 @@ const AboutTimeline: React.FC = () => {
                 </div>
 
                 {/* Desktop Timeline Item */}
-                <div className="hidden lg:block relative min-h-[600px] mb-32">
+                <div className="hidden lg:block relative min-h-[650px] mb-0">
                   {/* Centered line with yellow dots - height matches card + padding */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[550px] top-[-25px]">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-[650px] top-[-22px]">
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-[#5A7D7C]"></div>
                     
                     {/* Yellow dots at start and end of line */}
@@ -111,21 +111,21 @@ const AboutTimeline: React.FC = () => {
                   {/* Relative positioned container */}
                   <div className="relative w-full h-full">
                     {/* Card positioned based on index (alternating) - aligned with top yellow dot */}
-                    <div className={`absolute top-0 w-[638px] bg-white rounded-[20px] p-16 shadow-lg ${
+                    <div className={`absolute top-[-20px] w-[574px] bg-white rounded-[20px] p-14 shadow-lg ${
                       index % 2 === 0 
                         ? 'right-1/2 transform -translate-x-5' // Left side (first, third)
                         : 'left-1/2 transform translate-x-5'  // Right side (second, fourth)
                     }`}>
-                      <div className="space-y-8">
+                      <div className="space-y-7">
                         {/* Colored header */}
                         <div 
-                          className="w-full h-[304px] rounded-[20px]"
+                          className="w-full h-[274px] rounded-[20px]"
                           style={{ backgroundColor: item.color }}
                         ></div>
                         
                         {/* Content */}
                         <div className="space-y-3">
-                          <h3 className="text-[36px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[412px]">
+                          <h3 className="text-[32px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[371px]">
                             {item.title}
                           </h3>
                           <p className="text-body-medium text-[#1F1514]">
@@ -136,12 +136,12 @@ const AboutTimeline: React.FC = () => {
                     </div>
 
                     {/* Year positioned opposite to card - aligned with top yellow dot */}
-                    <div className={`absolute top-0 ${
+                    <div className={`absolute top-[-20px] ${
                       index % 2 === 0 
                         ? 'left-1/2 transform translate-x-5'  // Right side (first, third)
                         : 'right-1/2 transform -translate-x-5' // Left side (second, fourth)
                     }`}>
-                      <span className="text-[36px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
+                      <span className="text-[32px] font-lora font-bold leading-1.28 tracking-0.01 text-black">
                         {item.date}
                       </span>
                     </div>
