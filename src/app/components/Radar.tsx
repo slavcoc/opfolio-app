@@ -17,7 +17,7 @@ const Radar = () => {
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16">
           {/* Image - Left side */}
           <div className="flex-1 relative order-2 lg:order-1 w-full max-w-[500px] lg:max-w-none mx-auto">
-            <div className="relative w-full aspect-[4/3]  overflow-hidden">
+            <div className="relative w-full">
               {/* Pattern top border */}
               <div
                 className="absolute inset-0 "
@@ -27,13 +27,13 @@ const Radar = () => {
 
               {/* Image container with shadow */}
               <div
-                className="absolute inset-0  overflow-hidden"
+                className="relative w-full"
                 
               >
                 <img
                   src="./raitin-pie.GIF"
                   alt="Opfolio Radar MacBook"
-                  className="object-fit p-2"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
