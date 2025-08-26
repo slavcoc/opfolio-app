@@ -52,24 +52,26 @@ const Products = () => {
           {products.map((product, index) => {
             return (
               <div
-                className="product-card w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col gap-6 sm:gap-8 relative"
+                className="product-card w-full border border-[#5A7D7C] rounded-[20px] p-6 sm:p-8 md:p-10 lg:p-[20px_20px_100px_20px] flex flex-col justify-between gap-6 sm:gap-8 relative"
                 key={`${index}${product.title}`}
               >
                
                 {/* {index === 2 && <img className="absolute bottom-[30%] right-[-16.5em]" src={`/product-line-after.png`} alt="Arrow right"/>} */}
-                <Image
-                  src={product.icon}
-                  alt={product.title}
-                  width={48}
-                  height={48}
-                />
-                <h3 className="text-heading-4 text-black">
-                  {product.title}
-                </h3>
-                <p className="text-body-small text-black">
-                  {product.description}
-                </p>
-                <div className="flex items-center gap-1 pb-20">
+                <div className="flex flex-col gap-6 sm:gap-8">
+                  <Image
+                    src={product.icon}
+                    alt={product.title}
+                    width={48}
+                    height={48}
+                  />
+                  <h3 className="text-heading-4 text-black">
+                    {product.title}
+                  </h3>
+                  <p className="text-body-small text-black">
+                    {product.description}
+                  </p>
+                </div>
+                <div className="flex items-center gap-1">
                   <Link href={product.link}>
                     <div className="learn-more flex items-center cursor-pointer">
                       <span className="text-caption text-black">
