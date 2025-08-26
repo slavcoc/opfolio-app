@@ -53,7 +53,7 @@ const AboutTeamHierarchy: React.FC = () => {
     <section className="bg-[#F3F0E6] py-8 sm:py-12 md:py-16 lg:py-24 xl:py-36 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
       <div className="max-w-[1666px] mx-auto">
         <h2 className="font-lora font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] leading-[1.28] text-center text-[#1F1514] mb-8 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24">
-          Тимот на Opfolio
+          Одбор на директори
         </h2>
 
         <div className="flex flex-col gap-[88px]">

@@ -26,6 +26,8 @@ export interface BlogPostsResponse {
 const STRAPI_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
 const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN;
 
+
+// TODO: Add pagination
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   try {
     const response = await fetch(

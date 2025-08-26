@@ -15,9 +15,9 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="w-full theme-background">
-      <div className="w-full">
+      {/* <div className="w-full">
         <AboutIntro />
-      </div>
+      </div> */}
       {/* <div className="w-full">
         <AboutMissionAndVision />
       </div> */}
@@ -27,9 +27,9 @@ export default function AboutPage() {
       {/* <div className="w-full">
         <AboutOpfolio />
       </div> */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <AboutCeo />
-      </div>
+      </div> */}
       <div className="w-full">
         <AboutTeamHierarchy />
       </div>

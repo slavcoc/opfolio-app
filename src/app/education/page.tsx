@@ -1,6 +1,8 @@
 import EducationHeader from "@/app/components/EducationHeader";
 import EducationItems from "@/app/components/EducationItems";
+import EducationItemsSkeleton from "@/app/components/EducationItemsSkeleton";
 import Consultation from "../components/Consultation";
+import { Suspense } from "react";
 
 export default function EducationPage() {
   return (
@@ -9,7 +11,9 @@ export default function EducationPage() {
         <EducationHeader />
       </div>
       <div className="w-full">
-        <EducationItems />
+        <Suspense fallback={<EducationItemsSkeleton />}>
+          <EducationItems />
+        </Suspense>
       </div>
       <div className="w-full">
         <Consultation />

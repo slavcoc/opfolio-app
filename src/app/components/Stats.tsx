@@ -29,7 +29,7 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col gap-1 w-full md:w-[257px]">
               <div className="flex items-center p-2">
-                <h3 className="font-lora text-2xl md:text-3xl lg:text-[32px] font-bold text-[#1F1514] leading-[1.28]">
+                <h3 className="font-inter text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F1514] leading-[1.28]">
                   {stat.title}
                 </h3>
               </div>
