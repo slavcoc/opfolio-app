@@ -8,7 +8,7 @@ const AboutContact: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16 xl:gap-40">
           {/* Left Column - Contact Info */}
           <div className="flex-1">
-            <h2 className="font-lora font-semibold text-3xl sm:text-4xl lg:text-[48px] leading-[1.28] tracking-[0.01em] text-[#141F15] mb-8 lg:mb-32">
+            <h2 className="text-heading-2 text-[#141F15] mb-8 lg:mb-32">
               Контакт
             </h2>
 

@@ -24,7 +24,7 @@ const BlogChildFeatured = () => {
       </div>
 
       {/* Title */}
-      <h1 className="font-lora font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-[1.28] text-center text-black z-10">
+                  <h1 className="text-heading-3 text-center text-black z-10">
         Не можете да се одлучите или не знаете од каде да почнете?
       </h1>
 

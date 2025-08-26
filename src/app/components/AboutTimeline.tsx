@@ -132,7 +132,7 @@ const AboutTimeline: React.FC = async () => {
                 <div className="lg:hidden mb-14">
                   {/* Date - Mobile version */}
                   <div className="mb-5 sm:mb-7 text-center">
-                    <span className="text-2xl sm:text-3xl md:text-4xl font-lora font-bold leading-1.28 tracking-0.01 text-black">
+                    <span className="text-heading-2 font-bold tracking-0.01 text-black">
                       {item.date}
                     </span>
                   </div>
@@ -159,7 +159,7 @@ const AboutTimeline: React.FC = async () => {
                       
                       {/* Content */}
                       <div className="space-y-2 sm:space-y-3">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[29px] font-lora font-normal leading-1.28 tracking-0.01 text-[#1F1514] max-w-[334px]">
+                        <h3 className="text-heading-3 font-normal tracking-0.01 text-[#1F1514] max-w-[334px]">
                           {item.title}
                         </h3>
                         <p className="text-body-medium text-[#1F1514]">

@@ -24,7 +24,7 @@ export default async function EducationItems() {
                 />
               </div>
               <div className="p-4 sm:p-6 md:p-8 flex flex-col h-full justify-between">
-                <h3 className="font-lora text-xl sm:text-2xl md:text-3xl lg:text-[32px] leading-[1.375em] text-black">
+                <h3 className="text-heading-3 text-black">
                   {card.title}
                 </h3>
 

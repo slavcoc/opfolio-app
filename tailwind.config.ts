@@ -35,6 +35,8 @@ const config: Config = {
         '32': ['32px', { lineHeight: '1.4em' }],
         '40': ['40px', { lineHeight: '1.28em' }],
         '48': ['48px', { lineHeight: '1.28em' }],
+        '58': ['58px', { lineHeight: '1.28em' }], // New H2 size (64px * 0.9 = 57.6px, rounded to 58px)
+        '52': ['52px', { lineHeight: '1.28em' }], // New H3 size (58px * 0.9 = 52.2px, rounded to 52px)
         '64': ['64px', { lineHeight: '1.09em' }],
         '102': ['101.947px', { lineHeight: '1.366em' }],
       },
