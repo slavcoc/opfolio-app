@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const AboutTimeline: React.FC = () => {
   const timelineData = [
     {
@@ -7,61 +7,76 @@ const AboutTimeline: React.FC = () => {
       date: "January 2015",
       title: "Основање на компанијата",
       description: "Друштвото за управување со отворени и затворени инвестициски фондови ОПФОЛИО ИНВЕСТИЦИИ АД Скопје е основано во 2025 година.",
-      color: "#FD4A4A"
+      color: "#FD4A4A",
+      image: "./forus-lines.png"
     },
     {
       id: 2,
       date: "January 2015",
       title: "Регистрација во Трговски регистар",
       description: "Друштвото е запишано во Трговскиот регистар под матичен број 6443532 на 10.06.2025 година.",
-      color: "#FD4A4A"
+      color: "#FD4A4A",
+      image: "./forus-lines.png"
     },
     {
       id: 3,
       date: "January 2015",
       title: "Одобрение за работа",
       description: "Друштвото работи согласно одобрението за работа издадено од страна на Комисијата за хартии од вредност на Република Македонија.",
-      color: "#FD4A4A"
+      color: "#FD4A4A",
+      image: "./forus-lines.png"
     },
     {
       id: 4,
       date: "January 2015",
       title: "Започнување со управување",
       description: "Друштвото ќе управува со два отворени инвестициски фондови.",
-      color: "#FD4A4A"
+      color: "#FD4A4A",
+      image: "./forus-lines.png"
     }
   ];
 
   return (
-    <section className="bg-[#F3F0E6] py-12 sm:py-16 md:py-20 lg:py-24 xl:py-36 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
+    <section className="bg-[#F3F0E6] ">
+      <div className="relative w-full py-12 sm:py-16 md:py-20 overflow-hidden ">
       <div className="mx-auto max-w-[1444px]">
+        
         {/* Header Section */}
         <div className="mb-8 sm:mb-16 md:mb-20 lg:mb-22">
-          <h2 className="text-heading-2 text-[#1F1514] mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-heading-2 text-[#1F1514] mb-6 sm:mb-8 md:mb-10 text-center">
           За Друштвото
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-[175px]">
-            <div className="space-y-6 sm:space-y-8 md:space-y-10">
-              <p className="text-body-medium text-[#1F1514] max-w-[614px]">
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6 sm:space-y-8 md:space-y-10 text-justify">
+              <p className="text-body-medium text-[#1F1514]">
               Друштвото за управување со отворени и затворени инвестициски фондови ОПФОЛИО ИНВЕСТИЦИИ АД Скопје е основано во 2025 година. Основната главнина на Друштвото изнесува 250.000 евра и е поделена на 1.000 обични акции, секоја со номинална вредност од 250 евра. Мнозински акционер во друштвото е ОПФОЛИО АД Скопје.
               </p>
-              <p className="text-body-medium text-[#1F1514] max-w-[614px]">
+              <p className="text-body-medium text-[#1F1514]">
               Друштвото ја врши својата дејност врз основа на дозволата за работа издадена од Комисијата за хартии од вредност на Република Македонија (број: УП1 08-113, од 29.05.2025 година).
               </p>
-            </div>
-            <div className="space-y-6 sm:space-y-8 md:space-y-10">
-              <p className="text-body-medium text-[#1F1514] max-w-[614px]">
-              Друштвото е запишано во Трговскиот регистар на 10.06.2025 година, со единствен матичен број 7851499. Во рамките на својата дејност, Друштвото ќе управува со два отворени инвестициски фондови. Седиштето се наоѓа на улица „Дане Крапчев“ бр. 21/6 во Скопје.
+              <p className="text-body-medium text-[#1F1514]">
+              Друштвото е запишано во Трговскиот регистар на 10.06.2025 година, со единствен матичен број 7851499. Во рамките на својата дејност, Друштвото ќе управува со два отворени инвестициски фондови. Седиштето се наоѓа на улица &ldquo;Дане Крапчев&rdquo; бр. 21/6 во Скопје.
               </p>
-              <p className="text-body-medium text-[#1F1514] max-w-[614px]">
+              <p className="text-body-medium text-[#1F1514]">
               Пречистениот текст на Статутот на Друштвото е усвоен на 18.12.2024 година.
               </p>
-              <p className="text-body-medium text-[#1F1514] max-w-[614px]">
+              <p className="text-body-medium text-[#1F1514]">
               Депозитарна банка на фондовите со кои управува Друштвото ќе е Шпаркасе Банка АД Скопје.
               </p>
             </div>
+            <div className="absolute right-0 bottom-0 w-[50%] h-[100%] z-[1]">
+        <Image
+          src="./forus-lines.png"
+          alt="For us Item"
+          fill
+          className="object-cover"
+        />
+      </div>
           </div>
+         </div>
         </div>
+        </div>
+        <div className="mx-auto max-w-[1444px]">
         <div style={{height: "8rem"}}></div>
 
         {/* Timeline Section */}
@@ -82,11 +97,15 @@ const AboutTimeline: React.FC = () => {
                   {/* Card - Mobile version */}
                   <div className="w-full bg-white rounded-[20px] p-5 sm:p-6 md:p-10 lg:p-13 shadow-lg">
                     <div className="space-y-5 sm:space-y-6">
-                      {/* Colored header */}
-                      <div 
-                        className="w-full h-39 sm:h-52 md:h-65 lg:h-[247px] rounded-[20px]"
-                        style={{ backgroundColor: item.color }}
-                      ></div>
+                      {/* Image header */}
+                      <div className="w-full h-39 sm:h-52 md:h-65 lg:h-[247px] rounded-[20px] relative overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                       
                       {/* Content */}
                       <div className="space-y-2 sm:space-y-3">
@@ -130,11 +149,15 @@ const AboutTimeline: React.FC = () => {
                         : 'left-1/2 transform translate-x-20'  // Right side (second, fourth)
                     }`}>
                       <div className="space-y-6">
-                        {/* Colored header */}
-                        <div 
-                          className="w-full h-[247px] rounded-[20px]"
-                          style={{ backgroundColor: item.color }}
-                        ></div>
+                        {/* Image header */}
+                        <div className="w-full h-[247px] rounded-[20px] relative overflow-hidden">
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                         
                         {/* Content */}
                         <div className="space-y-3">
@@ -164,6 +187,7 @@ const AboutTimeline: React.FC = () => {
             ))}
           </div>
         </div>
+       
       </div>
     </section>
   );
