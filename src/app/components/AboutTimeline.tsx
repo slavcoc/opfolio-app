@@ -1,40 +1,83 @@
 import React from "react";
 import Image from "next/image";
-const AboutTimeline: React.FC = () => {
-  const timelineData = [
-    {
-      id: 1,
-      date: "January 2015",
-      title: "Основање на компанијата",
-      description: "Друштвото за управување со отворени и затворени инвестициски фондови ОПФОЛИО ИНВЕСТИЦИИ АД Скопје е основано во 2025 година.",
-      color: "#FD4A4A",
-      image: "./forus-lines.png"
-    },
-    {
-      id: 2,
-      date: "January 2015",
-      title: "Регистрација во Трговски регистар",
-      description: "Друштвото е запишано во Трговскиот регистар под матичен број 6443532 на 10.06.2025 година.",
-      color: "#FD4A4A",
-      image: "./forus-lines.png"
-    },
-    {
-      id: 3,
-      date: "January 2015",
-      title: "Одобрение за работа",
-      description: "Друштвото работи согласно одобрението за работа издадено од страна на Комисијата за хартии од вредност на Република Македонија.",
-      color: "#FD4A4A",
-      image: "./forus-lines.png"
-    },
-    {
-      id: 4,
-      date: "January 2015",
-      title: "Започнување со управување",
-      description: "Друштвото ќе управува со два отворени инвестициски фондови.",
-      color: "#FD4A4A",
-      image: "./forus-lines.png"
-    }
-  ];
+import { getAllTimelineItems } from "../../services/timelineService";
+import { TimelineItem } from "../../services/timelineService";
+
+const AboutTimeline: React.FC = async () => {
+  // Fetch timeline data from Strapi
+  console.log('AboutTimeline: Starting to fetch timeline data...');
+  
+  let timelineData: TimelineItem[] = [];
+  
+  try {
+    timelineData = await getAllTimelineItems();
+    console.log('AboutTimeline: Received timeline data:', timelineData);
+  } catch (error) {
+    console.error('AboutTimeline: Error fetching timeline data:', error);
+    // Fallback data if API fails
+    timelineData = [
+      {
+        id: 1,
+        documentId: "fallback-1",
+        date: "Март 2012",
+        title: "Раѓање на идејата",
+        description: "Започна развојот на концепт за инвестициски модел базиран на научни и историски податоци, со цел заштита на вредноста на средствата при нестабилни пазарни услови",
+        color: "#FD4A4A",
+        image: null,
+        order: 1,
+        createdAt: "2025-01-01T00:00:00.000Z",
+        updatedAt: "2025-01-01T00:00:00.000Z",
+        publishedAt: "2025-01-01T00:00:00.000Z",
+        locale: null,
+        status: "published"
+      },
+      {
+        id: 2,
+        documentId: "fallback-2",
+        date: "Мај 2015",
+        title: "Трансформација во софтвер",
+        description: "Теоретскиот модел е успешно имплементиран во софтверска апликација за извршување брзи и автоматизирани пресметки и анализи.",
+        color: "#FD4A4A",
+        image: null,
+        order: 2,
+        createdAt: "2025-01-01T00:00:00.000Z",
+        updatedAt: "2025-01-01T00:00:00.000Z",
+        publishedAt: "2025-01-01T00:00:00.000Z",
+        locale: null,
+        status: "published"
+      },
+      {
+        id: 3,
+        documentId: "fallback-3",
+        date: "Март 2021",
+        title: "Основање на холдинг компанија",
+        description: "Група домашни претприемачи ја основаат &ldquo;Опфолио АД&rdquo; – холдинг компанија со стратешки фокус на инвестиции во финансиската и ИКТ индустријата.",
+        color: "#FD4A4A",
+        image: null,
+        order: 3,
+        createdAt: "2025-01-01T00:00:00.000Z",
+        updatedAt: "2025-01-01T00:00:00.000Z",
+        publishedAt: "2025-01-01T00:00:00.000Z",
+        locale: null,
+        status: "published"
+      },
+      {
+        id: 4,
+        documentId: "fallback-4",
+        date: "Мај 2025",
+        title: "Специјализација и почеток со работа",
+        description: "Основано е друштвото &ldquo;Опфолио Инвестиции АД&rdquo;. По добивањето на дозволата за работа, друштвото официјално започнува да нуди услуги за управување со инвестициски фондови, управување со средства за клиенти и инвестиционо советување.",
+        color: "#FD4A4A",
+        image: null,
+        order: 4,
+        createdAt: "2025-01-01T00:00:00.000Z",
+        updatedAt: "2025-01-01T00:00:00.000Z",
+        publishedAt: "2025-01-01T00:00:00.000Z",
+        locale: null,
+        status: "published"
+      }
+    ];
+  }
 
   return (
     <section className="bg-[#F3F0E6] ">
@@ -43,9 +86,9 @@ const AboutTimeline: React.FC = () => {
         
         {/* Header Section */}
         <div className="mb-8 sm:mb-16 md:mb-20 lg:mb-22">
-          <h2 className="text-heading-2 text-[#1F1514] mb-6 sm:mb-8 md:mb-10 text-center">
+          <h1 className="text-heading-1 text-[#1F1514] text-center pb-10">
           За Друштвото
-          </h2>
+          </h1>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6 sm:space-y-8 md:space-y-10 text-justify">
               <p className="text-body-medium text-[#1F1514]">
@@ -99,12 +142,19 @@ const AboutTimeline: React.FC = () => {
                     <div className="space-y-5 sm:space-y-6">
                       {/* Image header */}
                       <div className="w-full h-39 sm:h-52 md:h-65 lg:h-[247px] rounded-[20px] relative overflow-hidden">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          fill
-                          className="object-cover"
-                        />
+                        {item.image ? (
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div 
+                            className="w-full h-full rounded-[20px]"
+                            style={{ backgroundColor: item.color }}
+                          ></div>
+                        )}
                       </div>
                       
                       {/* Content */}
@@ -151,12 +201,19 @@ const AboutTimeline: React.FC = () => {
                       <div className="space-y-6">
                         {/* Image header */}
                         <div className="w-full h-[247px] rounded-[20px] relative overflow-hidden">
-                          <Image
-                            src={item.image}
-                            alt={item.title}
-                            fill
-                            className="object-cover"
-                          />
+                          {item.image ? (
+                            <Image
+                              src={item.image}
+                              alt={item.title}
+                              fill
+                              className="object-cover"
+                            />
+                          ) : (
+                            <div 
+                              className="w-full h-full rounded-[20px]"
+                              style={{ backgroundColor: item.color }}
+                            ></div>
+                          )}
                         </div>
                         
                         {/* Content */}
@@ -187,7 +244,7 @@ const AboutTimeline: React.FC = () => {
             ))}
           </div>
         </div>
-       
+        
       </div>
     </section>
   );

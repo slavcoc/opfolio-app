@@ -1,20 +1,21 @@
-export interface BlogPost {
+export interface TimelineItem {
   id: number;
-  title: string;
+  documentId: string;
   date: string;
-  readTime: string;
-  imageUrl: string | null;
-  link: string;
-  content: string | null;
-  excerpt: string | null;
-  slug: string;
+  title: string;
+  description: string;
+  color: string;
+  image: string | null;
+  order: number;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  locale: string | null;
+  status: string;
 }
 
-export interface BlogPostsResponse {
-  data: BlogPost[];
+export interface TimelineItemsResponse {
+  data: TimelineItem[];
   meta: {
     page: number;
     pageSize: number;
@@ -26,8 +27,7 @@ export interface BlogPostsResponse {
 const STRAPI_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
 const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN;
 
-// TODO: Add pagination
-export async function getAllBlogPosts(): Promise<BlogPost[]> {
+export async function getAllTimelineItems(): Promise<TimelineItem[]> {
   try {
     if (!STRAPI_API_TOKEN) {
       console.warn('STRAPI_API_TOKEN not found. Please set a valid API token in your environment variables.');
@@ -40,7 +40,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     };
 
     const response = await fetch(
-      `${STRAPI_BASE_URL}/api/blog-posts?sort=date:desc&pagination[pageSize]=100`,
+      `${STRAPI_BASE_URL}/api/timeline-items?sort=order:asc&populate=*`,
       {
         headers,
         next: { revalidate: 3600 }, // Cache for 1 hour
@@ -53,19 +53,19 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       } else if (response.status === 401) {
         throw new Error('Unauthorized. Please check your API token.');
       } else {
-        throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
+        throw new Error(`Failed to fetch timeline items: ${response.status} ${response.statusText}`);
       }
     }
 
-    const data: BlogPostsResponse = await response.json();
+    const data: TimelineItemsResponse = await response.json();
     return data.data;
   } catch (error) {
-    console.error('Error fetching blog posts:', error);
+    console.error('Error fetching timeline items:', error);
     throw error;
   }
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getTimelineItemById(id: number): Promise<TimelineItem | null> {
   try {
     if (!STRAPI_API_TOKEN) {
       console.warn('STRAPI_API_TOKEN not found. Please set a valid API token in your environment variables.');
@@ -78,7 +78,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     };
 
     const response = await fetch(
-      `${STRAPI_BASE_URL}/api/blog-posts?filters[slug][$eq]=${slug}&populate=*`,
+      `${STRAPI_BASE_URL}/api/timeline-items/${id}?populate=*`,
       {
         headers,
         next: { revalidate: 3600 }, // Cache for 1 hour
@@ -91,31 +91,31 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
       } else if (response.status === 401) {
         throw new Error('Unauthorized. Please check your API token.');
       } else {
-        throw new Error(`Failed to fetch blog post: ${response.status} ${response.statusText}`);
+        throw new Error(`Failed to fetch timeline item: ${response.status} ${response.statusText}`);
       }
     }
 
-    const data: BlogPostsResponse = await response.json();
+    const data: TimelineItemsResponse = await response.json();
     return data.data[0] || null;
   } catch (error) {
-    console.error('Error fetching blog post:', error);
+    console.error('Error fetching timeline item:', error);
     throw error;
   }
 }
 
 // Test function to verify the service is working
-export async function testBlogService(): Promise<void> {
+export async function testTimelineService(): Promise<void> {
   try {
-    console.log('Testing blog service...');
+    console.log('Testing timeline service...');
     console.log('STRAPI_BASE_URL:', STRAPI_BASE_URL);
     console.log('STRAPI_API_TOKEN available:', !!STRAPI_API_TOKEN);
     
-    const items = await getAllBlogPosts();
-    console.log(`Successfully retrieved ${items.length} blog posts:`);
+    const items = await getAllTimelineItems();
+    console.log(`Successfully retrieved ${items.length} timeline items:`);
     items.forEach((item, index) => {
       console.log(`${index + 1}. ${item.title} (${item.date})`);
     });
   } catch (error) {
-    console.error('Blog service test failed:', error);
+    console.error('Timeline service test failed:', error);
   }
 }

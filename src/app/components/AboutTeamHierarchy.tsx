@@ -67,7 +67,7 @@ const AboutTeamHierarchy: React.FC = () => {
           {/* Second row - two members */}
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-[24px]">
             {teamMembers.slice(1, 3).map((member, index) => (
-              <div key={index} className="w-full max-w-[493px] mx-auto">
+              <div key={index} className="w-full max-w-[460px] mx-auto">
                 <TeamMemberCard member={member} />
               </div>
             ))}
@@ -76,7 +76,7 @@ const AboutTeamHierarchy: React.FC = () => {
           {/* Third row - three members */}
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-[24px]">
             {teamMembers.slice(3).map((member, index) => (
-              <div key={index} className="w-full max-w-[493px] mx-auto">
+              <div key={index} className="w-full max-w-[520px] mx-auto">
                 <TeamMemberCard member={member} />
               </div>
             ))}
@@ -126,7 +126,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
         <h3 className="font-inter font-semibold text-[28px] leading-none text-black mb-[16px]">
           {member.name}
         </h3>
-        <p className="font-inter text-[16px] leading-[1.4] text-black mb-[10px] max-w-[500px] mx-auto">
+        <p className="font-inter text-[16px] leading-[1.4] text-black mb-[10px] max-w-[420px] mx-auto">
           {member.position}
         </p>
         {member.linkedin && (

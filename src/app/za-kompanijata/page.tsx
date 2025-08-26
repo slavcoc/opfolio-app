@@ -1,8 +1,5 @@
 import React from "react";
-import AboutIntro from "@/app/components/AboutIntro";
-import AboutMissionAndVision from "@/app/components/AboutMissionAndVision";
 import AboutTimeline from "@/app/components/AboutTimeline";
-import AboutCeo from "@/app/components/AboutCeo";
 import AboutTeamHierarchy from "@/app/components/AboutTeamHierarchy";
 import AboutDocumentsAndRegulation from "@/app/components/AboutDocumentsAndRegulation";
 

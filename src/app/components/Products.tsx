@@ -34,10 +34,10 @@ const Products = () => {
       <div className="max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px]">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-          <h2 className="text-heading-3 text-[#000000] mb-3 sm:mb-4">
+          <h1 className="text-heading-3 text-[#000000] mb-3 sm:mb-4">
             Продукти
             
-          </h2>
+          </h1>
           <p className="text-body-small text-[#000000] max-w-2xl mx-auto">
             Имајќи предвид дека финансиските потреби на секој инвеститор се уникатни, нудиме сеопфатен спектар на инвестициски решенија – од инвестициски фондови до целосно персонализирани портфолија усогласени со вашите цели и ризичен профил.
           </p>
