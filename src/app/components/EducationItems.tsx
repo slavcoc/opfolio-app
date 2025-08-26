@@ -24,7 +24,7 @@ export default async function EducationItems() {
                 />
               </div>
               <div className="p-4 sm:p-6 md:p-8 flex flex-col h-full justify-between">
-                <h3 className="text-heading-3 text-black">
+                <h3 className="text-heading-4 text-black">
                   {card.title}
                 </h3>
 

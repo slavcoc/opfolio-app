@@ -43,11 +43,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-heading-2 {
-  @apply font-lora text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-58 font-semibold leading-1.28 tracking-0.01;
+  @apply font-lora text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-52 font-medium leading-1.28 tracking-0.01;
 }
 
 .text-heading-3 {
-  @apply font-lora text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-52 font-medium leading-1.28;
+  @apply font-lora text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-40 font-medium leading-1.28;
 }
 
 .text-heading-4 {

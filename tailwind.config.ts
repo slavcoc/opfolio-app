@@ -34,9 +34,11 @@ const config: Config = {
         '24': ['24px', { lineHeight: '1.28em' }],
         '32': ['32px', { lineHeight: '1.4em' }],
         '40': ['40px', { lineHeight: '1.28em' }],
+        '42': ['42px', { lineHeight: '1.28em' }], // New smaller H3 size (52px * 0.8 = 41.6px, rounded to 42px)
+        '47': ['47px', { lineHeight: '1.28em' }], // Previous H3 size
         '48': ['48px', { lineHeight: '1.28em' }],
-        '58': ['58px', { lineHeight: '1.28em' }], // New H2 size (64px * 0.9 = 57.6px, rounded to 58px)
-        '52': ['52px', { lineHeight: '1.28em' }], // New H3 size (58px * 0.9 = 52.2px, rounded to 52px)
+        '52': ['52px', { lineHeight: '1.28em' }], // New H2 size (64px * 0.8 = 51.2px, rounded to 52px)
+        '58': ['58px', { lineHeight: '1.28em' }], // Previous H2 size
         '64': ['64px', { lineHeight: '1.09em' }],
         '102': ['101.947px', { lineHeight: '1.366em' }],
       },

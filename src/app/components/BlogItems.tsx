@@ -67,7 +67,7 @@ const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
                   </div>
                 </div>
 
-                <h3 className="text-heading-3 text-[#1F1514] mb-4 sm:mb-6">
+                <h3 className="text-heading-4 text-[#1F1514] mb-4 sm:mb-6">
                   {item.title}
                 </h3>
 
