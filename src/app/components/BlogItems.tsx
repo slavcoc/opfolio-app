@@ -1,18 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-interface BlogItem {
-  id: string;
-  title: string;
-  date: string;
-  readTime: string;
-  imageUrl: string;
-  link: string;
-}
+import { BlogPost } from "../../services/blogService";
 
 interface BlogItemsProps {
-  items: BlogItem[];
+  items: BlogPost[];
 }
 
 const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
@@ -30,7 +22,7 @@ const BlogItems: React.FC<BlogItemsProps> = ({ items }) => {
             >
               <div className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full">
                 <Image
-                  src={item.imageUrl}
+                  src={item.imageUrl || "/blog/blog-1.png"}
                   alt={item.title}
                   fill
                   className="object-cover"
