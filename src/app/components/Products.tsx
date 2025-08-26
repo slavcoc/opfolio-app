@@ -57,21 +57,21 @@ const Products = () => {
               >
                
                 {/* {index === 2 && <img className="absolute bottom-[30%] right-[-16.5em]" src={`/product-line-after.png`} alt="Arrow right"/>} */}
-                <div className="flex flex-col gap-6 sm:gap-8">
+                <div className="flex flex-col gap-6 sm:gap-8 flex-1">
                   <Image
                     src={product.icon}
                     alt={product.title}
                     width={48}
                     height={48}
                   />
-                  <h3 className="text-heading-4 text-black">
+                  <h3 className="text-heading-4 text-black min-h-[60px] sm:min-h-[70px] md:min-h-[80px] flex items-center">
                     {product.title}
                   </h3>
-                  <p className="text-body-small text-black">
+                  <p className="text-body-small text-black flex-1">
                     {product.description}
                   </p>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 pb-4 sm:pb-6 md:pb-8">
                   <Link href={product.link}>
                     <div className="learn-more flex items-center cursor-pointer">
                       <span className="text-caption text-black">
