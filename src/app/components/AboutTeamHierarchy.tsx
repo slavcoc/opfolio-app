@@ -93,9 +93,9 @@ interface TeamMemberCardProps {
 
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
   return (
-    <div className="relative h-[439px]">
+    <div className="relative h-[520px]">
       {/* Green border box - positioned to not cover the image */}
-      <div className="absolute left-0 top-[140px] w-full h-[299px] border-[1px] border-[#5A7D7C] rounded-[12px]" />
+      <div className="absolute left-0 top-[140px] w-full h-[380px] border-[1px] border-[#5A7D7C] rounded-[12px]" />
 
       {/* Image section - positioned above the green border */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2">
@@ -122,11 +122,11 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
       </div>
 
       {/* Member info - positioned inside the green border */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[280px] text-center px-4">
+      <div className="absolute left-1/2 -translate-x-1/2 top-[320px] text-center px-8">
         <h3 className="font-inter font-semibold text-[28px] leading-none text-black mb-[16px]">
           {member.name}
         </h3>
-        <p className="font-inter text-[16px] leading-[1.4] text-black mb-[10px] max-w-[380px] mx-auto">
+        <p className="font-inter text-[16px] leading-[1.4] text-black mb-[10px] max-w-[500px] mx-auto">
           {member.position}
         </p>
         {member.linkedin && (
