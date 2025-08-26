@@ -64,7 +64,7 @@ const Consultation = () => {
       {/* Consultation */}
       <div className="relative z-10 max-w-[1444px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[120px] pt-60">
         <div className="flex flex-col items-center gap-8 md:gap-10 lg:gap-12">
-          <h2 className="text-heading-2 text-[#1F1514] text-center max-w-[900px]">
+          <h2 className="text-heading-2 text-[#1F1514] text-center max-w-[900px]" style={{fontWeight: '500'}}>
             Не можете да се одлучите или не знаете од каде да почнете?{" "}
           </h2>
 

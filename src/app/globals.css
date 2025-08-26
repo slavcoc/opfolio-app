@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Typography Utility Classes */
 .text-heading-1 {
-  @apply font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-64 font-medium leading-1.09 tracking-0.01;
+  @apply font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-64 font-normal leading-1.09 tracking-0.01;
 }
 
 .text-heading-2 {
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-heading-3 {
-  @apply font-lora text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-1.28;
+  @apply font-lora text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-1.28;
 }
 
 .text-heading-4 {
