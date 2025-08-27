@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import GoogleMap from "./GoogleMap";
+import { submitContactForm } from "../../services/contactService";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ const ContactForm = () => {
     email: "",
     phone: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -18,10 +22,29 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage("");
+
+    try {
+      await submitContactForm(formData);
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : "An error occurred while submitting the form.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,11 +127,30 @@ const ContactForm = () => {
                 />
               </div>
 
+              {/* Success Message */}
+              {submitStatus === 'success' && (
+                <div className="w-full mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-[10px]">
+                  <p className="text-center">Ви благодариме! Вашата порака е успешно испратена. Ќе ве контактираме наскоро.</p>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="w-full mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-[10px]">
+                  <p className="text-center">{errorMessage}</p>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full mt-6 px-8 py-4 bg-[#F4DA84] text-[#1F1514] text-button rounded-[10px] hover:bg-[#E4CA74] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#F4DA84] focus:ring-offset-2"
+                disabled={isSubmitting}
+                className={`w-full mt-6 px-8 py-4 text-[#1F1514] text-button rounded-[10px] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-[#F4DA84] hover:bg-[#E4CA74] focus:ring-[#F4DA84]'
+                }`}
               >
-                Испрати
+                {isSubmitting ? 'Се испраќа...' : 'Испрати'}
               </button>
             </form>
           </div>
