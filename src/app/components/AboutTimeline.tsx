@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { getAllTimelineItems } from "../../services/timelineService";
-import { TimelineItem } from "../../services/timelineService";
+import { getAllTimelineItems } from "../services/timelineService";
+import { TimelineItem } from "../services/timelineService";
 
 const AboutTimeline: React.FC = async () => {
   // Fetch timeline data from Strapi

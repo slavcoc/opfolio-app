@@ -1,7 +1,7 @@
 import Consultation from "../components/Consultation";
 import BlogHeader from "../components/BlogHeader";
 import BlogItems from "../components/BlogItems";
-import { getAllBlogPosts } from "../../services/blogService";
+import { getAllBlogPosts } from "../services/blogService";
 
 export default async function BlogPage() {
   const data = await getAllBlogPosts();

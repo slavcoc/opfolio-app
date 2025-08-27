@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllEducationItems } from "../../services/educationService";
+import { getAllEducationItems } from "../services/educationService";
 
 export default async function EducationItems() {
   const items = await getAllEducationItems();

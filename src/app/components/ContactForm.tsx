@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import GoogleMap from "./GoogleMap";
-import { submitContactForm } from "../../services/contactService";
+import { submitContactForm } from "../services/contactService";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
