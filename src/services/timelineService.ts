@@ -95,8 +95,8 @@ export async function getTimelineItemById(id: number): Promise<TimelineItem | nu
       }
     }
 
-    const data: TimelineItemsResponse = await response.json();
-    return data.data[0] || null;
+    const data: { data: TimelineItem } = await response.json();
+    return data.data || null;
   } catch (error) {
     console.error('Error fetching timeline item:', error);
     throw error;
