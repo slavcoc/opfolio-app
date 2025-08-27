@@ -46,7 +46,7 @@ const AboutCeo = () => {
                 <h2 className="text-quote-large text-[#1F1514] pt-5">
                   - Васко Богдановски
                 </h2>
-                <p className="text-quote-large text-[#1F1514] pl-5">
+                <p className="text-quote-light text-[#1F1514] pl-5">
                   Главен извршен директор на Опфолио Инвестиции АД Скопје
                 </p>
               </div>

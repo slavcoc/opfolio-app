@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Kazimir-Bold', sans-serif;
 }
 
+
 /* Typography Utility Classes */
 .text-heading-1 {
   @apply font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-64 font-normal leading-1.09 tracking-0.01;
@@ -44,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-heading-2 {
   @apply font-lora text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-52 font-medium leading-1.28 tracking-0.01;
+}
+
+.text-heading-2-with-background {
+  @apply font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-52 font-medium leading-1.28 tracking-0.01;
 }
 
 .text-heading-3 {
@@ -94,6 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 .element-hidden-effect {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+.text-quote-light {
+  @apply font-lora text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-22 font-medium leading-1.28;
 }
 
 .element-hidden-effect.visible {
