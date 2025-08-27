@@ -40,6 +40,7 @@ interface AddressFallbackProps {
 
 const MapComponent: React.FC<MapComponentProps> = ({ address }) => {
   const mapRef = React.useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [map, setMap] = React.useState<google.maps.Map | null>(null);
 
   React.useEffect(() => {
