@@ -24,7 +24,7 @@ export interface ContactSubmissionResponse {
 }
 
 const STRAPI_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN;
+const STRAPI_API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
 
 export async function submitContactForm(formData: ContactSubmissionRequest): Promise<ContactSubmission> {
   try {
