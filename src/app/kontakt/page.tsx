@@ -1,6 +1,5 @@
 import React from "react";
-import KontaktHeader from "@/app/components/KontaktHeader";
-import ContactForm from "@/app/components/ContactForm";
+import ContactForm from "../components/ContactForm";
 
 export const metadata = {
   title: "Контакт | Opfolio",
@@ -10,9 +9,9 @@ export const metadata = {
 export default function KontaktPage() {
   return (
     <main className="w-full theme-background">
-      <div className="w-full">
+      {/* <div className="w-full">
         <KontaktHeader />
-      </div>
+      </div> */}
       <div className="w-full">
         <ContactForm />
       </div>

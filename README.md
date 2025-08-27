@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Google Maps Integration
+
+This project includes Google Maps integration for displaying the company location. To set up Google Maps:
+
+1. Get a Google Maps API key from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
+2. Create a `.env.local` file in the root directory
+3. Add your API key to the `.env.local` file:
+   ```
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+   ```
+4. Make sure to enable the following Google Maps APIs:
+   - Maps JavaScript API
+   - Geocoding API
+
+The map will display the company address: "Дане Крапчев 21/6, Центар-Скопје, Macedonia"
