@@ -157,7 +157,7 @@ const Navigation = () => {
                   </Link>
                   
                   <div
-                    className={`nav-dropdown fixed left-0 right-0 bg-[#E6E7E5] top-[106px] shadow-lg z-[90] transition-all duration-300 ${
+                    className={`nav-dropdown fixed left-0 right-0 bg-[#E6E7E5] top-[88px] shadow-lg z-[90] transition-all duration-300 ${
                       openDropdown === item.label ? 'opacity-100 visible' : 'opacity-0 invisible'
                     }`}
                     onMouseEnter={() => handleDropdownMouseEnter(item.label)}
